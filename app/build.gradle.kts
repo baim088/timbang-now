@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.timbangnow.timbangnow"
+    namespace = "com.timbangnow.app"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.timbangnow.timbangnow"
+        applicationId = "com.timbangnow.app"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -44,6 +44,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Firebase
     implementation(platform("com.google.firebase:firebase-bom:34.15.0"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+
+    // MVVM
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.9.0")
+    implementation("androidx.lifecycle:lifecycle-livedata:2.9.0")
+
+    // Chart
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

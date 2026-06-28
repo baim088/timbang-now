@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_beranda"
+        android:icon="@drawable/ic_home"
+        android:title="@string/tab_beranda" />
+    <item
+        android:id="@+id/nav_nutrisi"
+        android:icon="@drawable/ic_nutrition"
+        android:title="@string/tab_nutrisi" />
+    <item
+        android:id="@+id/nav_reservasi"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/tab_reservasi" />
+    <item
+        android:id="@+id/nav_profil"
+        android:icon="@drawable/ic_person"
+        android:title="@string/tab_profil" />
+    <item
+        android:id="@+id/nav_tentang"
+        android:icon="@drawable/ic_info"
+        android:title="@string/tab_tentang" />
+</menu>

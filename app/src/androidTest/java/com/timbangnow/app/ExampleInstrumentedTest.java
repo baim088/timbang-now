@@ -1,4 +1,4 @@
-package com.timbangnow.timbangnow;
+package com.timbangnow.app;
 
 import android.content.Context;
 

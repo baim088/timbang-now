@@ -1,3 +1,130 @@
 <resources>
     <string name="app_name">TimbangNow</string>
+
+    <!-- Auth -->
+    <string name="login">Masuk</string>
+    <string name="register">Daftar Akun</string>
+    <string name="email">Alamat Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="nama">Nama Lengkap</string>
+    <string name="tinggi_badan">Tinggi Badan (cm)</string>
+    <string name="hint_email">Masukkan alamat email Anda</string>
+    <string name="hint_password">Masukkan kata sandi</string>
+    <string name="hint_nama">Masukkan nama lengkap Anda</string>
+    <string name="hint_tinggi">Masukkan tinggi badan dalam sentimeter</string>
+    <string name="belum_punya_akun">Belum punya akun? Daftar sekarang</string>
+    <string name="sudah_punya_akun">Sudah punya akun? Masuk di sini</string>
+    <string name="selamat_datang">Selamat datang di TimbangNow</string>
+
+    <!-- Change Password -->
+    <string name="ganti_password">Ganti Kata Sandi</string>
+    <string name="password_lama">Kata Sandi Saat Ini</string>
+    <string name="password_baru">Kata Sandi Baru</string>
+    <string name="konfirmasi_password_baru">Konfirmasi Kata Sandi Baru</string>
+    <string name="hint_password_lama">Masukkan kata sandi lama Anda</string>
+    <string name="hint_password_baru">Masukkan kata sandi baru (min 6 karakter)</string>
+    <string name="error_password_lama_kosong">Kata sandi saat ini tidak boleh kosong</string>
+    <string name="error_password_baru_pendek">Kata sandi baru minimal 6 karakter</string>
+    <string name="error_password_tidak_cocok">Konfirmasi kata sandi tidak cocok</string>
+    <string name="ganti_password_berhasil">Kata sandi berhasil diperbarui!</string>
+    <string name="ganti_password_gagal">Gagal memperbarui kata sandi. Periksa kata sandi lama Anda</string>
+
+    <!-- Error Messages -->
+    <string name="error_email_kosong">Alamat email tidak boleh kosong</string>
+    <string name="error_email_format">Format email tidak valid</string>
+    <string name="error_password_pendek">Kata sandi minimal 6 karakter</string>
+    <string name="error_nama_kosong">Nama lengkap tidak boleh kosong</string>
+    <string name="error_tinggi_kosong">Tinggi badan tidak boleh kosong</string>
+    <string name="error_login_gagal">Gagal masuk. Periksa email dan kata sandi Anda</string>
+    <string name="error_register_gagal">Pendaftaran gagal. Silakan coba lagi</string>
+    <string name="error_koneksi">Koneksi terputus. Periksa jaringan internet Anda</string>
+
+    <!-- Dashboard Tabs -->
+    <string name="tab_beranda">Beranda</string>
+    <string name="tab_nutrisi">Nutrisi</string>
+    <string name="tab_reservasi">Reservasi</string>
+    <string name="tab_profil">Profil</string>
+    <string name="tab_tentang">Tentang</string>
+    <string name="tab_member">Member</string>
+    <string name="tab_timbangan">Timbangan</string>
+
+    <!-- Home -->
+    <string name="berat_terakhir">Berat Badan Terakhir</string>
+    <string name="bmi_label">Indeks Massa Tubuh (BMI)</string>
+    <string name="target_berat">Target Berat Badan</string>
+    <string name="air_minum_hari_ini">Konsumsi Air Minum Hari Ini</string>
+    <string name="tambah_air">+ 250 ml Air</string>
+    <string name="grafik_progress">Grafik Perkembangan Berat Badan</string>
+    <string name="kg">kg</string>
+    <string name="ml">ml</string>
+    <string name="belum_ada_data">Belum ada data pencatatan</string>
+
+    <!-- Nutrisi -->
+    <string name="pagi">Pagi Hari</string>
+    <string name="siang">Siang Hari</string>
+    <string name="malam">Malam Hari</string>
+    <string name="shake">Nutrisi Shake</string>
+    <string name="teh">Teh Energi</string>
+    <string name="aloe">Ekstrak Aloe Vera</string>
+    <string name="nutrisi_hari_ini">Kepatuhan Nutrisi Hari Ini</string>
+
+    <!-- Reservasi -->
+    <string name="pilih_tanggal">Pilih Tanggal Kunjungan</string>
+    <string name="pilih_slot">Pilih Jam Slot Kunjungan</string>
+    <string name="slot_pagi">Slot Sesi Pagi</string>
+    <string name="slot_malam">Slot Sesi Malam</string>
+    <string name="reservasi_btn">Kirim Reservasi</string>
+    <string name="reservasi_berhasil">Reservasi berhasil disimpan!</string>
+    <string name="reservasi_gagal">Reservasi gagal. Silakan coba beberapa saat lagi</string>
+
+    <!-- Timbangan -->
+    <string name="berat_badan">Berat Badan (kg)</string>
+    <string name="body_fat">Lemak Tubuh (%)</string>
+    <string name="visceral_fat">Lemak Perut (Visceral Fat)</string>
+    <string name="bmi">Indeks Massa Tubuh (BMI)</string>
+    <string name="simpan">Simpan Data</string>
+    <string name="input_timbangan">Catat Hasil Timbangan Physical</string>
+    <string name="data_tersimpan">Data berhasil disimpan</string>
+
+    <!-- Profil & Tentang -->
+    <string name="profil">Profil Pengguna</string>
+    <string name="logout">Keluar Akun</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="riwayat_timbangan">Riwayat Timbangan Fisik</string>
+    <string name="konfirmasi_logout">Apakah Anda yakin ingin keluar dari akun ini?</string>
+    <string name="ya">Ya, Keluar</string>
+    <string name="batal">Batal</string>
+    <string name="set_target">Atur Target Berat Badan</string>
+    <string name="berat_target_hint">Masukkan target berat badan (kg)</string>
+    <string name="versi_aplikasi">Versi 1.0.0</string>
+    <string name="deskripsi_aplikasi">TimbangNow adalah aplikasi manajemen berat badan dan komposisi tubuh untuk ekosistem Rumah Sehat (Nutrition Club). Dilengkapi dengan sistem aksesibilitas suara menyeluruh untuk memudahkan seluruh pengguna.</string>
+    <string name="developer_title">Dikembangkan Oleh (Developer)</string>
+    <string name="developer_name">Ibrahim</string>
+
+    <!-- Admin -->
+    <string name="daftar_member">Daftar Anggota Rumah Sehat</string>
+    <string name="reservasi_hari_ini">Daftar Reservasi Hari Ini</string>
+    <string name="hadir">Telah Hadir</string>
+    <string name="tidak_hadir">Belum Hadir</string>
+    <string name="dashboard_admin">Panel Dasbor Pelatih (Admin)</string>
+    <string name="subtitle_nutrition_club">Klub Nutrisi &amp; Rumah Sehat</string>
+
+    <!-- Content Descriptions (Aksesibilitas) -->
+    <string name="cd_logo">Logo Aplikasi TimbangNow</string>
+    <string name="cd_foto_dev">Foto Pengembang Ibrahim</string>
+    <string name="cd_email_input">Kotak masukan alamat email</string>
+    <string name="cd_password_input">Kotak masukan kata sandi</string>
+    <string name="cd_nama_input">Kotak masukan nama lengkap Anda</string>
+    <string name="cd_tinggi_input">Kotak masukan tinggi badan dalam sentimeter</string>
+    <string name="cd_tombol_login">Tombol untuk masuk ke aplikasi</string>
+    <string name="cd_tombol_register">Tombol untuk mendaftar akun baru</string>
+    <string name="cd_tambah_air">Tombol tambah dua ratus lima puluh mililiter air minum</string>
+    <string name="cd_grafik_berat">Grafik perkiraan perkembangan berat badan</string>
+    <string name="cd_tombol_simpan">Tombol simpan data fisik</string>
+    <string name="cd_pilih_tanggal">Tombol pemilih tanggal kunjungan</string>
+    <string name="cd_tombol_reservasi">Tombol kirimkan reservasi</string>
+    <string name="cd_tombol_logout">Tombol keluar dari akun</string>
+    <string name="cd_tombol_set_target">Tombol atur sasaran berat badan</string>
+    <string name="cd_tombol_tentang">Tombol buka informasi tentang aplikasi</string>
+    <string name="cd_tombol_ganti_password">Tombol buka form ganti kata sandi</string>
 </resources>

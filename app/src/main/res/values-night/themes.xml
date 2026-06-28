@@ -1,7 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.TimbangNow" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/emerald_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/emerald_surface</item>
+        <item name="colorOnPrimaryContainer">@color/emerald_green</item>
+        <item name="colorSecondary">@color/emerald_light</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorError">@color/soft_red</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorSurface">@color/charcoal</item>
+        <item name="colorOnSurface">@color/light_gray</item>
+        <item name="colorOnSurfaceVariant">@color/divider_gray</item>
+        <item name="android:statusBarColor">@color/charcoal</item>
+        <item name="android:navigationBarColor">@color/charcoal</item>
+
+        <!-- Font Family App-Wide -->
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">@font/poppins</item>
     </style>
 </resources>

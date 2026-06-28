@@ -1,8 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.TimbangNow" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/emerald_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/emerald_surface</item>
+        <item name="colorOnPrimaryContainer">@color/emerald_green</item>
+        <item name="colorSecondary">@color/emerald_light</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorError">@color/soft_red</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/charcoal</item>
+        <item name="colorOnSurfaceVariant">@color/medium_gray</item>
+        <item name="android:statusBarColor">@color/emerald_green</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+
+        <!-- Font Family App-Wide -->
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">@font/poppins</item>
     </style>
 
     <style name="Theme.TimbangNow" parent="Base.Theme.TimbangNow" />
