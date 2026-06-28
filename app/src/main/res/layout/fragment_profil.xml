@@ -78,7 +78,6 @@
             android:layout_marginTop="8dp"
             android:minHeight="48dp"
             android:text="@string/ganti_password"
-            app:icon="@drawable/ic_key"
             app:iconTint="@color/emerald_green"
             android:contentDescription="@string/cd_tombol_ganti_password" />
 

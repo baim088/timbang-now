@@ -71,8 +71,8 @@
     <!-- Reservasi -->
     <string name="pilih_tanggal">Pilih Tanggal Kunjungan</string>
     <string name="pilih_slot">Pilih Jam Slot Kunjungan</string>
-    <string name="slot_pagi">Slot Sesi Pagi</string>
-    <string name="slot_malam">Slot Sesi Malam</string>
+    <string name="slot_pagi">Sesi Pagi</string>
+    <string name="slot_malam">Sesi Malam</string>
     <string name="reservasi_btn">Kirim Reservasi</string>
     <string name="reservasi_berhasil">Reservasi berhasil disimpan!</string>
     <string name="reservasi_gagal">Reservasi gagal. Silakan coba beberapa saat lagi</string>
