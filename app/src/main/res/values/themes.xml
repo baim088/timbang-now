@@ -18,7 +18,21 @@
         <!-- Font Family App-Wide -->
         <item name="fontFamily">@font/poppins</item>
         <item name="android:fontFamily">@font/poppins</item>
+
+        <!-- Bottom Navigation Style Overrides -->
+        <item name="bottomNavigationStyle">@style/Widget.TimbangNow.BottomNavigationView</item>
     </style>
 
     <style name="Theme.TimbangNow" parent="Base.Theme.TimbangNow" />
+
+    <!-- Bottom Navigation Styles for Poppins Font -->
+    <style name="Widget.TimbangNow.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/Widget.TimbangNow.BottomNavigationView.Text</item>
+        <item name="itemTextAppearanceInactive">@style/Widget.TimbangNow.BottomNavigationView.Text</item>
+    </style>
+
+    <style name="Widget.TimbangNow.BottomNavigationView.Text" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
 </resources>

@@ -27,15 +27,6 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/btn_admin_key"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_key"
-                app:tint="@color/emerald_green"
-                android:contentDescription="@string/cd_tombol_ganti_password" />
-
-            <ImageButton
                 android:id="@+id/btn_admin_logout"
                 android:layout_width="48dp"
                 android:layout_height="48dp"

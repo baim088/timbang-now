@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/belum_ada_data"
                     android:textColor="@color/emerald_green"
-                    android:textSize="28sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <LinearLayout

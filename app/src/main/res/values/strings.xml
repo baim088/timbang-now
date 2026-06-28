@@ -102,7 +102,7 @@
     <string name="developer_name">Ibrahim</string>
 
     <!-- Admin -->
-    <string name="daftar_member">Daftar Anggota Rumah Sehat</string>
+    <string name="daftar_member">Daftar Anggota</string>
     <string name="reservasi_hari_ini">Daftar Reservasi Hari Ini</string>
     <string name="hadir">Telah Hadir</string>
     <string name="tidak_hadir">Belum Hadir</string>
