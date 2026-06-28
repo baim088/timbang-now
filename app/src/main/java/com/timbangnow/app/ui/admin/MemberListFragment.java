@@ -40,7 +40,6 @@ public class MemberListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         rvMembers = view.findViewById(R.id.rv_members);
-        btnAdminKey = view.findViewById(R.id.btn_admin_key);
         btnAdminLogout = view.findViewById(R.id.btn_admin_logout);
 
         rvMembers.setLayoutManager(new LinearLayoutManager(getContext()));
