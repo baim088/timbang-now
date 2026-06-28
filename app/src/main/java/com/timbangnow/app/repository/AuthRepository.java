@@ -31,14 +31,14 @@ public class AuthRepository {
                 .addOnFailureListener(e -> cb.onError(e.getLocalizedMessage()));
     }
 
-    public void register(String email, String password, String nama, AuthCallback cb) {
+    public void register(String email, String password, String nama, String alamat, AuthCallback cb) {
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnSuccessListener(authResult -> {
                     FirebaseUser firebaseUser = authResult.getUser();
                     if (firebaseUser != null) {
                         String uid = firebaseUser.getUid();
                         // ponytail: tinggiBadan defaults to 0.0, will be entered by coach/admin during physical weighing
-                        User newUser = new User(uid, nama, 0.0, email, System.currentTimeMillis(), "user");
+                        User newUser = new User(uid, nama, alamat, 0.0, email, System.currentTimeMillis(), "user");
                         db.collection("artifacts").document("timbangnow-app")
                                 .collection("users").document(uid)
                                 .set(newUser)

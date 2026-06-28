@@ -22,8 +22,8 @@ import com.timbangnow.app.viewmodel.AuthViewModel;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private TextInputLayout tilNama, tilEmail, tilPassword;
-    private TextInputEditText etNama, etEmail, etPassword;
+    private TextInputLayout tilNama, tilAlamat, tilEmail, tilPassword;
+    private TextInputEditText etNama, etAlamat, etEmail, etPassword;
     private MaterialButton btnRegister;
     private ProgressBar progressBar;
     private TextView tvLogin;
@@ -35,9 +35,11 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         tilNama = findViewById(R.id.til_nama);
+        tilAlamat = findViewById(R.id.til_alamat);
         tilEmail = findViewById(R.id.til_email);
         tilPassword = findViewById(R.id.til_password);
         etNama = findViewById(R.id.et_nama);
+        etAlamat = findViewById(R.id.et_alamat);
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
         btnRegister = findViewById(R.id.btn_register);
@@ -68,16 +70,24 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void handleRegister() {
         tilNama.setError(null);
+        tilAlamat.setError(null);
         tilEmail.setError(null);
         tilPassword.setError(null);
 
         String nama = etNama.getText() != null ? etNama.getText().toString().trim() : "";
+        String alamat = etAlamat.getText() != null ? etAlamat.getText().toString().trim() : "";
         String email = etEmail.getText() != null ? etEmail.getText().toString().trim() : "";
         String password = etPassword.getText() != null ? etPassword.getText().toString().trim() : "";
 
         if (TextUtils.isEmpty(nama)) {
             tilNama.setError(getString(R.string.error_nama_kosong));
             AudioAssistant.getInstance(this).speak(getString(R.string.error_nama_kosong));
+            return;
+        }
+
+        if (TextUtils.isEmpty(alamat)) {
+            tilAlamat.setError(getString(R.string.error_alamat_kosong));
+            AudioAssistant.getInstance(this).speak(getString(R.string.error_alamat_kosong));
             return;
         }
 
@@ -101,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         progressBar.setVisibility(View.VISIBLE);
         btnRegister.setEnabled(false);
-        authViewModel.register(email, password, nama);
+        authViewModel.register(email, password, nama, alamat);
     }
 
     @Override

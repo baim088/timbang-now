@@ -30,8 +30,8 @@ import com.timbangnow.app.viewmodel.UserViewModel;
 
 public class ProfilFragment extends Fragment {
 
-    private TextView tvNama, tvEmail, tvTinggi;
-    private MaterialButton btnSetTarget, btnGantiPassword, btnLogout;
+    private TextView tvNama, tvEmail, tvAlamat, tvTinggi;
+    private MaterialButton btnEditProfil, btnSetTarget, btnGantiPassword, btnLogout;
     private RecyclerView rvRiwayat;
     private TimbanganAdapter adapter;
 
@@ -51,7 +51,9 @@ public class ProfilFragment extends Fragment {
 
         tvNama = view.findViewById(R.id.tv_profil_nama);
         tvEmail = view.findViewById(R.id.tv_profil_email);
+        tvAlamat = view.findViewById(R.id.tv_profil_alamat);
         tvTinggi = view.findViewById(R.id.tv_profil_tinggi);
+        btnEditProfil = view.findViewById(R.id.btn_edit_profil);
         btnSetTarget = view.findViewById(R.id.btn_set_target);
         btnGantiPassword = view.findViewById(R.id.btn_ganti_password);
         btnLogout = view.findViewById(R.id.btn_logout);
@@ -68,6 +70,7 @@ public class ProfilFragment extends Fragment {
             if (user != null) {
                 tvNama.setText(user.getNama());
                 tvEmail.setText(user.getEmail());
+                tvAlamat.setText("Alamat: " + (user.getAlamat() != null && !user.getAlamat().isEmpty() ? user.getAlamat() : "Belum diisi"));
                 tvTinggi.setText("Tinggi: " + (user.getTinggiBadan() > 0 ? user.getTinggiBadan() + " cm" : "Belum diisi oleh coach"));
             }
         });
@@ -84,10 +87,15 @@ public class ProfilFragment extends Fragment {
             }
         });
 
+        btnEditProfil.setOnClickListener(v -> startActivity(new Intent(getContext(), EditProfileActivity.class)));
         btnSetTarget.setOnClickListener(v -> showSetTargetDialog());
         btnGantiPassword.setOnClickListener(v -> startActivity(new Intent(getContext(), ChangePasswordActivity.class)));
         btnLogout.setOnClickListener(v -> showLogoutDialog());
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
         userViewModel.loadUserProfile();
         userViewModel.loadLatestTimbangan();
         userViewModel.loadTimbanganList();

@@ -40,6 +40,9 @@
         <activity
             android:name=".ui.user.UserDashboardActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.user.EditProfileActivity"
+            android:exported="false" />
 
         <!-- Admin -->
         <activity

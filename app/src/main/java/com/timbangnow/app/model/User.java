@@ -3,6 +3,7 @@ package com.timbangnow.app.model;
 public class User {
     private String uid;
     private String nama;
+    private String alamat;
     private double tinggiBadan;
     private String email;
     private long tanggalDaftar;
@@ -10,9 +11,10 @@ public class User {
 
     public User() {}
 
-    public User(String uid, String nama, double tinggiBadan, String email, long tanggalDaftar, String role) {
+    public User(String uid, String nama, String alamat, double tinggiBadan, String email, long tanggalDaftar, String role) {
         this.uid = uid;
         this.nama = nama;
+        this.alamat = alamat;
         this.tinggiBadan = tinggiBadan;
         this.email = email;
         this.tanggalDaftar = tanggalDaftar;
@@ -24,6 +26,9 @@ public class User {
 
     public String getNama() { return nama; }
     public void setNama(String nama) { this.nama = nama; }
+
+    public String getAlamat() { return alamat; }
+    public void setAlamat(String alamat) { this.alamat = alamat; }
 
     public double getTinggiBadan() { return tinggiBadan; }
     public void setTinggiBadan(double tinggiBadan) { this.tinggiBadan = tinggiBadan; }

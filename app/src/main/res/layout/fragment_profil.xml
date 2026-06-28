@@ -51,6 +51,14 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tv_profil_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/medium_gray"
+                    android:textSize="14sp" />
+
+                <TextView
                     android:id="@+id/tv_profil_tinggi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -61,11 +69,23 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_set_target"
+            android:id="@+id/btn_edit_profil"
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:minHeight="48dp"
+            android:text="@string/edit_profil"
+            app:icon="@drawable/ic_person"
+            app:iconTint="@color/emerald_green"
+            android:contentDescription="@string/cd_tombol_edit_profil" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_set_target"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:minHeight="48dp"
             android:text="@string/set_target"
             android:contentDescription="@string/cd_tombol_set_target" />
@@ -78,6 +98,7 @@
             android:layout_marginTop="8dp"
             android:minHeight="48dp"
             android:text="@string/ganti_password"
+            app:icon="@drawable/ic_key"
             app:iconTint="@color/emerald_green"
             android:contentDescription="@string/cd_tombol_ganti_password" />
 

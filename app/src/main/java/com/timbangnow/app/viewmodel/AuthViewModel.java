@@ -30,8 +30,8 @@ public class AuthViewModel extends ViewModel {
         });
     }
 
-    public void register(String email, String password, String nama) {
-        authRepo.register(email, password, nama, new AuthRepository.AuthCallback() {
+    public void register(String email, String password, String nama, String alamat) {
+        authRepo.register(email, password, nama, alamat, new AuthRepository.AuthCallback() {
             @Override
             public void onSuccess(String message) {
                 registerResult.postValue("SUCCESS");

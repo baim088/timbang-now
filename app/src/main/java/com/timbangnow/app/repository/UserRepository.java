@@ -13,7 +13,9 @@ import com.timbangnow.app.model.User;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Locale;
 
 public class UserRepository {
@@ -45,6 +47,10 @@ public class UserRepository {
         return new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date());
     }
 
+    private String getDocIdFromTimestamp(long timestamp) {
+        return new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date(timestamp));
+    }
+
     public void getUserProfile(DataCallback<User> cb) {
         getUserDoc().get()
                 .addOnSuccessListener(doc -> {
@@ -54,6 +60,16 @@ public class UserRepository {
                         cb.onError("Data user tidak ditemukan");
                     }
                 })
+                .addOnFailureListener(e -> cb.onError(e.getLocalizedMessage()));
+    }
+
+    public void updateUserProfile(String nama, String alamat, AuthRepository.AuthCallback cb) {
+        Map<String, Object> updates = new HashMap<>();
+        updates.put("nama", nama);
+        updates.put("alamat", alamat);
+
+        getUserDoc().update(updates)
+                .addOnSuccessListener(aVoid -> cb.onSuccess("Profil berhasil diperbarui"))
                 .addOnFailureListener(e -> cb.onError(e.getLocalizedMessage()));
     }
 
@@ -83,7 +99,11 @@ public class UserRepository {
     }
 
     public void getNutrisiHariIni(DataCallback<List<Nutrisi>> cb) {
-        long start = getTodayMidnight();
+        getNutrisiByTanggal(getTodayMidnight(), cb);
+    }
+
+    public void getNutrisiByTanggal(long tanggalMidnight, DataCallback<List<Nutrisi>> cb) {
+        long start = tanggalMidnight;
         long end = start + (24 * 60 * 60 * 1000) - 1;
         getUserDoc().collection("nutrisi")
                 .whereGreaterThanOrEqualTo("timestamp", start)
@@ -93,8 +113,18 @@ public class UserRepository {
                 .addOnFailureListener(e -> cb.onError(e.getLocalizedMessage()));
     }
 
+    public void getRiwayatNutrisi(DataCallback<List<Nutrisi>> cb) {
+        getUserDoc().collection("nutrisi")
+                .orderBy("timestamp", Query.Direction.DESCENDING)
+                .limit(40)
+                .get()
+                .addOnSuccessListener(querySnapshot -> cb.onSuccess(querySnapshot.toObjects(Nutrisi.class)))
+                .addOnFailureListener(e -> cb.onError(e.getLocalizedMessage()));
+    }
+
     public void saveNutrisi(Nutrisi nutrisi, AuthRepository.AuthCallback cb) {
-        String docId = getTodayDocId() + "_" + nutrisi.getKategoriWaktu();
+        String datePrefix = getDocIdFromTimestamp(nutrisi.getTimestamp());
+        String docId = datePrefix + "_" + nutrisi.getKategoriWaktu();
         nutrisi.setId(docId);
         getUserDoc().collection("nutrisi").document(docId)
                 .set(nutrisi)

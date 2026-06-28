@@ -22,6 +22,7 @@ public class UserViewModel extends ViewModel {
     private final MutableLiveData<Timbangan> latestTimbangan = new MutableLiveData<>();
     private final MutableLiveData<List<Timbangan>> timbanganList = new MutableLiveData<>();
     private final MutableLiveData<List<Nutrisi>> nutrisiHariIni = new MutableLiveData<>();
+    private final MutableLiveData<List<Nutrisi>> riwayatNutrisi = new MutableLiveData<>();
     private final MutableLiveData<AirMinum> airMinumHariIni = new MutableLiveData<>();
     private final MutableLiveData<Target> target = new MutableLiveData<>();
     private final MutableLiveData<String> operationResult = new MutableLiveData<>();
@@ -30,6 +31,7 @@ public class UserViewModel extends ViewModel {
     public LiveData<Timbangan> getLatestTimbangan() { return latestTimbangan; }
     public LiveData<List<Timbangan>> getTimbanganList() { return timbanganList; }
     public LiveData<List<Nutrisi>> getNutrisiHariIni() { return nutrisiHariIni; }
+    public LiveData<List<Nutrisi>> getRiwayatNutrisi() { return riwayatNutrisi; }
     public LiveData<AirMinum> getAirMinumHariIni() { return airMinumHariIni; }
     public LiveData<Target> getTarget() { return target; }
     public LiveData<String> getOperationResult() { return operationResult; }
@@ -40,6 +42,21 @@ public class UserViewModel extends ViewModel {
             public void onSuccess(User data) { userProfile.postValue(data); }
             @Override
             public void onError(String error) { operationResult.postValue(error); }
+        });
+    }
+
+    public void updateUserProfile(String nama, String alamat) {
+        userRepo.updateUserProfile(nama, alamat, new AuthRepository.AuthCallback() {
+            @Override
+            public void onSuccess(String message) {
+                operationResult.postValue("PROFILE_UPDATED");
+                loadUserProfile();
+            }
+
+            @Override
+            public void onError(String error) {
+                operationResult.postValue(error);
+            }
         });
     }
 
@@ -65,6 +82,24 @@ public class UserViewModel extends ViewModel {
         userRepo.getNutrisiHariIni(new UserRepository.DataCallback<List<Nutrisi>>() {
             @Override
             public void onSuccess(List<Nutrisi> data) { nutrisiHariIni.postValue(data); }
+            @Override
+            public void onError(String error) { operationResult.postValue(error); }
+        });
+    }
+
+    public void loadNutrisiByTanggal(long tanggalMidnight) {
+        userRepo.getNutrisiByTanggal(tanggalMidnight, new UserRepository.DataCallback<List<Nutrisi>>() {
+            @Override
+            public void onSuccess(List<Nutrisi> data) { nutrisiHariIni.postValue(data); }
+            @Override
+            public void onError(String error) { operationResult.postValue(error); }
+        });
+    }
+
+    public void loadRiwayatNutrisi() {
+        userRepo.getRiwayatNutrisi(new UserRepository.DataCallback<List<Nutrisi>>() {
+            @Override
+            public void onSuccess(List<Nutrisi> data) { riwayatNutrisi.postValue(data); }
             @Override
             public void onError(String error) { operationResult.postValue(error); }
         });
@@ -101,11 +136,12 @@ public class UserViewModel extends ViewModel {
         });
     }
 
-    public void saveNutrisi(Nutrisi nutrisi) {
+    public void saveNutrisi(Nutrisi nutrisi, long currentSelectedDateMidnight) {
         userRepo.saveNutrisi(nutrisi, new AuthRepository.AuthCallback() {
             @Override
             public void onSuccess(String message) {
-                loadNutrisiHariIni();
+                loadNutrisiByTanggal(currentSelectedDateMidnight);
+                loadRiwayatNutrisi();
             }
             @Override
             public void onError(String error) {

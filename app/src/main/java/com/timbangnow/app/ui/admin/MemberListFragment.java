@@ -20,6 +20,7 @@ import com.timbangnow.app.R;
 import com.timbangnow.app.adapter.MemberAdapter;
 import com.timbangnow.app.ui.auth.ChangePasswordActivity;
 import com.timbangnow.app.ui.auth.LoginActivity;
+import com.timbangnow.app.ui.user.EditProfileActivity;
 import com.timbangnow.app.viewmodel.AdminViewModel;
 
 public class MemberListFragment extends Fragment {
@@ -27,7 +28,7 @@ public class MemberListFragment extends Fragment {
     private RecyclerView rvMembers;
     private MemberAdapter adapter;
     private AdminViewModel adminViewModel;
-    private ImageButton btnAdminKey, btnAdminLogout;
+    private ImageButton btnAdminEditProfile, btnAdminKey, btnAdminLogout;
 
     @Nullable
     @Override
@@ -40,6 +41,8 @@ public class MemberListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         rvMembers = view.findViewById(R.id.rv_members);
+        btnAdminEditProfile = view.findViewById(R.id.btn_admin_edit_profile);
+        btnAdminKey = view.findViewById(R.id.btn_admin_key);
         btnAdminLogout = view.findViewById(R.id.btn_admin_logout);
 
         rvMembers.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -60,6 +63,7 @@ public class MemberListFragment extends Fragment {
             }
         });
 
+        btnAdminEditProfile.setOnClickListener(v -> startActivity(new Intent(getContext(), EditProfileActivity.class)));
         btnAdminKey.setOnClickListener(v -> startActivity(new Intent(getContext(), ChangePasswordActivity.class)));
         btnAdminLogout.setOnClickListener(v -> showLogoutDialog());
 
