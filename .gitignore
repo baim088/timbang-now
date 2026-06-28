@@ -1,17 +1,39 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
+# Built application files
+*.apk
+*.aar
+*.apks
+*.aab
+*.dex
+
+# Files for the Metadata project
+.gradle/
+build/
 /build
+app/build/
+
+# IDE and Project Specific Files
+*.iml
+.idea/
+/.idea
+local.properties
+
+# Android Studio / IntelliJ specific
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Signing keys & Secrets (SANGAT PENTING)
+*.jks
+*.keystore
+key.properties
+secrets.properties
+
+# Firebase Configuration (PENTING: Mencegah API Key bocor di publik GitHub)
 app/google-services.json
+
+# Context / Agent Documentation (Opsional)
 agents.md
