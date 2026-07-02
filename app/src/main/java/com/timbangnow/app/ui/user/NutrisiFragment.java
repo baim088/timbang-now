@@ -5,9 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -30,7 +32,7 @@ import java.util.TimeZone;
 
 public class NutrisiFragment extends Fragment {
 
-    private MaterialButton btnPilihTanggal;
+    private MaterialButton btnPilihTanggal, btnSimpanNutrisi;
     private TextView tvTanggalNutrisi;
     private MaterialCheckBox cbPagiShake, cbPagiTeh, cbPagiAloe;
     private MaterialCheckBox cbSiangShake, cbSiangTeh, cbSiangAloe;
@@ -40,7 +42,6 @@ public class NutrisiFragment extends Fragment {
     private NutrisiHistoryAdapter historyAdapter;
 
     private UserViewModel userViewModel;
-    private boolean isUpdatingUi = false;
     private long selectedDateMidnight = 0;
 
     @Nullable
@@ -54,6 +55,7 @@ public class NutrisiFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         btnPilihTanggal = view.findViewById(R.id.btn_pilih_tanggal_nutrisi);
+        btnSimpanNutrisi = view.findViewById(R.id.btn_simpan_nutrisi);
         tvTanggalNutrisi = view.findViewById(R.id.tv_tanggal_nutrisi);
 
         cbPagiShake = view.findViewById(R.id.cb_pagi_shake);
@@ -85,9 +87,17 @@ public class NutrisiFragment extends Fragment {
         updateTanggalText();
 
         btnPilihTanggal.setOnClickListener(v -> showDatePicker());
+        
+        btnSimpanNutrisi.setOnClickListener(v -> {
+            new AlertDialog.Builder(requireContext())
+                    .setTitle("Konfirmasi")
+                    .setMessage("Apakah Anda yakin ingin menyimpan data nutrisi untuk tanggal ini?")
+                    .setPositiveButton("Ya", (dialog, which) -> saveAllNutrisi())
+                    .setNegativeButton("Batal", null)
+                    .show();
+        });
 
         userViewModel.getNutrisiHariIni().observe(getViewLifecycleOwner(), list -> {
-            isUpdatingUi = true;
             resetCheckboxes();
             if (list != null) {
                 for (Nutrisi n : list) {
@@ -106,7 +116,6 @@ public class NutrisiFragment extends Fragment {
                     }
                 }
             }
-            isUpdatingUi = false;
         });
 
         userViewModel.getRiwayatNutrisi().observe(getViewLifecycleOwner(), list -> {
@@ -115,7 +124,6 @@ public class NutrisiFragment extends Fragment {
             }
         });
 
-        setupListeners();
         userViewModel.loadNutrisiByTanggal(selectedDateMidnight);
         userViewModel.loadRiwayatNutrisi();
     }
@@ -160,27 +168,16 @@ public class NutrisiFragment extends Fragment {
         cbMalamAloe.setChecked(false);
     }
 
-    private void setupListeners() {
-        View.OnClickListener listenerPagi = v -> saveNutrisiCategory("Pagi", cbPagiShake.isChecked(), cbPagiTeh.isChecked(), cbPagiAloe.isChecked());
-        cbPagiShake.setOnClickListener(listenerPagi);
-        cbPagiTeh.setOnClickListener(listenerPagi);
-        cbPagiAloe.setOnClickListener(listenerPagi);
-
-        View.OnClickListener listenerSiang = v -> saveNutrisiCategory("Siang", cbSiangShake.isChecked(), cbSiangTeh.isChecked(), cbSiangAloe.isChecked());
-        cbSiangShake.setOnClickListener(listenerSiang);
-        cbSiangTeh.setOnClickListener(listenerSiang);
-        cbSiangAloe.setOnClickListener(listenerSiang);
-
-        View.OnClickListener listenerMalam = v -> saveNutrisiCategory("Malam", cbMalamShake.isChecked(), cbMalamTeh.isChecked(), cbMalamAloe.isChecked());
-        cbMalamShake.setOnClickListener(listenerMalam);
-        cbMalamTeh.setOnClickListener(listenerMalam);
-        cbMalamAloe.setOnClickListener(listenerMalam);
-    }
-
-    private void saveNutrisiCategory(String kategori, boolean shake, boolean teh, boolean aloe) {
-        if (isUpdatingUi) return;
-        long timestampToUse = selectedDateMidnight + (12 * 60 * 60 * 1000); // midday for chosen date
-        Nutrisi n = new Nutrisi(null, timestampToUse, kategori, shake, teh, aloe);
-        userViewModel.saveNutrisi(n, selectedDateMidnight);
+    private void saveAllNutrisi() {
+        long timestampToUse = selectedDateMidnight + (12 * 60 * 60 * 1000); // midday
+        Nutrisi pagi = new Nutrisi(null, timestampToUse, "Pagi", cbPagiShake.isChecked(), cbPagiTeh.isChecked(), cbPagiAloe.isChecked());
+        Nutrisi siang = new Nutrisi(null, timestampToUse, "Siang", cbSiangShake.isChecked(), cbSiangTeh.isChecked(), cbSiangAloe.isChecked());
+        Nutrisi malam = new Nutrisi(null, timestampToUse, "Malam", cbMalamShake.isChecked(), cbMalamTeh.isChecked(), cbMalamAloe.isChecked());
+        
+        userViewModel.saveNutrisi(pagi, selectedDateMidnight);
+        userViewModel.saveNutrisi(siang, selectedDateMidnight);
+        userViewModel.saveNutrisi(malam, selectedDateMidnight);
+        
+        Toast.makeText(getContext(), "Data nutrisi berhasil disimpan", Toast.LENGTH_SHORT).show();
     }
 }

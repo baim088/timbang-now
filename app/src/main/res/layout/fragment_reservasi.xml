@@ -38,107 +38,66 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/slot_pagi"
-            android:textColor="@color/charcoal"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/rg_slot_pagi"
+        <!-- Card Form Reservasi -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
-
-            <RadioButton
-                android:id="@+id/rb_pagi_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="06:00 - 07:00" />
-
-            <RadioButton
-                android:id="@+id/rb_pagi_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="07:00 - 08:00" />
-
-            <RadioButton
-                android:id="@+id/rb_pagi_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="08:00 - 09:00" />
-
-            <RadioButton
-                android:id="@+id/rb_pagi_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="09:00 - 10:00" />
-
-            <RadioButton
-                android:id="@+id/rb_pagi_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="10:00 - 11:00" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/slot_malam"
-            android:textColor="@color/charcoal"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:strokeWidth="0dp">
 
-        <RadioGroup
-            android:id="@+id/rg_slot_malam"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
-
-            <RadioButton
-                android:id="@+id/rb_malam_1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="18:30 - 19:00" />
+                android:orientation="vertical"
+                android:padding="16dp">
 
-            <RadioButton
-                android:id="@+id/rb_malam_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="19:00 - 19:30" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Form Reservasi Sesi"
+                    android:textColor="@color/charcoal"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/rb_malam_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="19:30 - 20:00" />
+                <!-- Dropdown Pilih Sesi -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_pilih_sesi"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Pilih Sesi Waktu">
 
-            <RadioButton
-                android:id="@+id/rb_malam_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="20:00 - 20:30" />
+                    <AutoCompleteTextView
+                        android:id="@+id/act_pilih_sesi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <RadioButton
-                android:id="@+id/rb_malam_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="20:30 - 21:00" />
-        </RadioGroup>
+                <!-- Dropdown Pilih Jam Slot -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_pilih_slot"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/pilih_slot">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/act_pilih_slot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_reservasi"

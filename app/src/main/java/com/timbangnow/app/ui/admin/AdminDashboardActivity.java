@@ -29,8 +29,10 @@ public class AdminDashboardActivity extends AppCompatActivity {
         bottomNav.setOnItemSelectedListener(item -> {
             Fragment selectedFragment = null;
             int itemId = item.getItemId();
-            if (itemId == R.id.nav_member || itemId == R.id.nav_timbangan) {
+            if (itemId == R.id.nav_member) {
                 selectedFragment = new MemberListFragment();
+            } else if (itemId == R.id.nav_analisa) {
+                selectedFragment = new AnalisaListFragment();
             } else if (itemId == R.id.nav_reservasi_admin) {
                 selectedFragment = new ReservasiAdminFragment();
             } else if (itemId == R.id.nav_tentang_admin) {

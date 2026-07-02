@@ -51,6 +51,14 @@
         <activity
             android:name=".ui.admin.InputTimbanganActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.admin.InputAnalisaActivity"
+            android:theme="@style/Theme.TimbangNow"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.HasilAnalisaActivity"
+            android:theme="@style/Theme.TimbangNow"
+            android:exported="false" />
 
         <!-- Common -->
         <activity

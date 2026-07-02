@@ -296,6 +296,15 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_simpan_nutrisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:minHeight="48dp"
+                    android:text="@string/simpan"
+                    android:backgroundTint="@color/emerald_green" />
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

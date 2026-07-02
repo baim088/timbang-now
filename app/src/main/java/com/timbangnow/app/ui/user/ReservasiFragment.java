@@ -1,16 +1,18 @@
 package com.timbangnow.app.ui.user;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -33,12 +35,16 @@ public class ReservasiFragment extends Fragment {
 
     private MaterialButton btnPilihTanggal, btnReservasi;
     private TextView tvTanggalTerpilih;
-    private RadioGroup rgPagi, rgMalam;
+    private AutoCompleteTextView actPilihSesi, actPilihSlot;
 
     private ReservasiViewModel reservasiViewModel;
     private UserViewModel userViewModel;
     private long selectedDateMidnight = 0;
     private String userName = "";
+
+    private final String[] sesiOptions = {"Sesi Pagi (06:00 - 11:00)", "Sesi Malam (18:30 - 21:00)"};
+    private final String[] slotPagi = {"06:00 - 07:00", "07:00 - 08:00", "08:00 - 09:00", "09:00 - 10:00", "10:00 - 11:00"};
+    private final String[] slotMalam = {"18:30 - 19:00", "19:00 - 19:30", "19:30 - 20:00", "20:00 - 20:30", "20:30 - 21:00"};
 
     @Nullable
     @Override
@@ -53,8 +59,8 @@ public class ReservasiFragment extends Fragment {
         btnPilihTanggal = view.findViewById(R.id.btn_pilih_tanggal);
         btnReservasi = view.findViewById(R.id.btn_reservasi);
         tvTanggalTerpilih = view.findViewById(R.id.tv_tanggal_terpilih);
-        rgPagi = view.findViewById(R.id.rg_slot_pagi);
-        rgMalam = view.findViewById(R.id.rg_slot_malam);
+        actPilihSesi = view.findViewById(R.id.act_pilih_sesi);
+        actPilihSlot = view.findViewById(R.id.act_pilih_slot);
 
         reservasiViewModel = new ViewModelProvider(this).get(ReservasiViewModel.class);
         userViewModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
@@ -75,17 +81,19 @@ public class ReservasiFragment extends Fragment {
         selectedDateMidnight = cal.getTimeInMillis();
         updateTanggalText();
 
+        // Setup dropdown for Sesi
+        actPilihSesi.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, sesiOptions));
+        actPilihSesi.setOnItemClickListener((parent, view1, position, id) -> {
+            actPilihSlot.setText(""); // clear slot selection
+            if (position == 0) {
+                actPilihSlot.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, slotPagi));
+            } else {
+                actPilihSlot.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, slotMalam));
+            }
+        });
+
         btnPilihTanggal.setOnClickListener(v -> showDatePicker());
-
-        // Ensure single radio selection between groups
-        rgPagi.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId != -1) rgMalam.clearCheck();
-        });
-        rgMalam.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId != -1) rgPagi.clearCheck();
-        });
-
-        btnReservasi.setOnClickListener(v -> handleReservasi());
+        btnReservasi.setOnClickListener(v -> handleReservasiClick());
 
         reservasiViewModel.getOperationResult().observe(getViewLifecycleOwner(), result -> {
             if ("SUCCESS".equals(result)) {
@@ -125,29 +133,28 @@ public class ReservasiFragment extends Fragment {
         tvTanggalTerpilih.setText("Tanggal: " + sdf.format(new Date(selectedDateMidnight)));
     }
 
-    private void handleReservasi() {
-        int pagiId = rgPagi.getCheckedRadioButtonId();
-        int malamId = rgMalam.getCheckedRadioButtonId();
-
-        if (pagiId == -1 && malamId == -1) {
+    private void handleReservasiClick() {
+        String slot = actPilihSlot.getText().toString().trim();
+        if (TextUtils.isEmpty(slot)) {
             Toast.makeText(getContext(), R.string.pilih_slot, Toast.LENGTH_SHORT).show();
             AudioAssistant.getInstance(requireContext()).speak(getString(R.string.pilih_slot));
             return;
         }
 
-        String slot = "";
-        if (pagiId != -1) {
-            RadioButton rb = getView().findViewById(pagiId);
-            if (rb != null) slot = rb.getText().toString();
-        } else if (malamId != -1) {
-            RadioButton rb = getView().findViewById(malamId);
-            if (rb != null) slot = rb.getText().toString();
-        }
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy", new Locale("id", "ID"));
+        String dateStr = sdf.format(new Date(selectedDateMidnight));
 
-        String userId = FirebaseAuth.getInstance().getCurrentUser() != null ?
-                FirebaseAuth.getInstance().getCurrentUser().getUid() : "";
+        new AlertDialog.Builder(requireContext())
+                .setTitle("Konfirmasi Reservasi")
+                .setMessage("Apakah Anda yakin ingin melakukan reservasi kehadiran untuk tanggal " + dateStr + " pada jam slot " + slot + "?")
+                .setPositiveButton("Ya, Reservasi", (dialog, which) -> {
+                    String userId = FirebaseAuth.getInstance().getCurrentUser() != null ?
+                            FirebaseAuth.getInstance().getCurrentUser().getUid() : "";
 
-        Reservasi r = new Reservasi(null, userId, userName, selectedDateMidnight, slot, false);
-        reservasiViewModel.buatReservasi(r);
+                    Reservasi r = new Reservasi(null, userId, userName, selectedDateMidnight, slot, false);
+                    reservasiViewModel.buatReservasi(r);
+                })
+                .setNegativeButton("Batal", null)
+                .show();
     }
 }

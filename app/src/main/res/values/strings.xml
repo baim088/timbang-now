@@ -8,6 +8,9 @@
     <string name="password">Kata Sandi</string>
     <string name="nama">Nama Lengkap</string>
     <string name="alamat">Alamat Lengkap</string>
+    <string name="telepon">No. Telepon / HP</string>
+    <string name="usia">Usia (tahun)</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
     <string name="tinggi_badan">Tinggi Badan (cm)</string>
     <string name="hint_email">Masukkan alamat email Anda</string>
     <string name="hint_password">Masukkan kata sandi</string>
@@ -43,6 +46,8 @@
     <string name="error_password_pendek">Kata sandi minimal 6 karakter</string>
     <string name="error_nama_kosong">Nama lengkap tidak boleh kosong</string>
     <string name="error_alamat_kosong">Alamat tidak boleh kosong</string>
+    <string name="error_telepon_kosong">Nomor telepon tidak boleh kosong</string>
+    <string name="error_usia_kosong">Usia tidak boleh kosong</string>
     <string name="error_tinggi_kosong">Tinggi badan tidak boleh kosong</string>
     <string name="error_login_gagal">Gagal masuk. Periksa email dan kata sandi Anda</string>
     <string name="error_register_gagal">Pendaftaran gagal. Silakan coba lagi</string>
@@ -56,6 +61,7 @@
     <string name="tab_tentang">Tentang</string>
     <string name="tab_member">Member</string>
     <string name="tab_timbangan">Timbangan</string>
+    <string name="tab_analisa">Analisa</string>
 
     <!-- Home -->
     <string name="berat_terakhir">Berat Badan Terakhir</string>
@@ -95,6 +101,50 @@
     <string name="input_timbangan">Catat Hasil Timbangan Physical</string>
     <string name="data_tersimpan">Data berhasil disimpan</string>
 
+    <!-- Analisa Kebugaran -->
+    <string name="analisa_kebugaran">Analisa Kebugaran</string>
+    <string name="riwayat_analisa">Riwayat Analisa Kebugaran</string>
+    <string name="buat_analisa_baru">+ Buat Analisa Baru</string>
+    <string name="lakukan_analisa">Lakukan Analisa Kebugaran</string>
+    <string name="analisa_terakhir">Analisa Kebugaran Terakhir</string>
+    <string name="member_terdaftar">Member Terdaftar</string>
+    <string name="pilih_member">Pilih Member</string>
+    <string name="simpan_dan_analisa">Simpan &amp; Analisa</string>
+    <string name="analisa_berhasil">Data analisa kebugaran berhasil disimpan</string>
+    <string name="hasil_analisa">Hasil Analisa Kebugaran</string>
+    <string name="kembali">Kembali</string>
+    <string name="data_komposisi_tubuh">Data Komposisi Tubuh</string>
+    <string name="identitas">Data Identitas</string>
+
+    <!-- Analisa Labels -->
+    <string name="label_bmi">BMI (Indeks Massa Tubuh)</string>
+    <string name="label_body_fat">Lemak Tubuh</string>
+    <string name="label_kadar_air">Kadar Air</string>
+    <string name="label_massa_otot">Massa Otot</string>
+    <string name="label_nilai_fisik">Nilai Fisik</string>
+    <string name="label_kalori">Kalori Harian</string>
+    <string name="label_usia_sel">Usia Sel (Metabolik)</string>
+    <string name="label_massa_tulang">Massa Tulang</string>
+    <string name="label_lemak_perut">Lemak Perut (Visceral Fat)</string>
+
+    <!-- Analisa Status -->
+    <string name="status_normal">Normal</string>
+    <string name="status_sehat">Sehat</string>
+    <string name="status_hati_hati">Hati-Hati</string>
+    <string name="status_bahaya">Bahaya</string>
+    <string name="status_kurang">Kurang</string>
+    <string name="status_berlebih">Berlebih</string>
+    <string name="status_kurus">Kurus</string>
+    <string name="status_gemuk">Gemuk</string>
+    <string name="status_obesitas">Obesitas</string>
+    <string name="status_muda">Muda (Bagus)</string>
+    <string name="status_sesuai">Sesuai Umur</string>
+    <string name="status_tua">Tua (Perhatian)</string>
+    <string name="status_berotot">Berotot</string>
+    <string name="status_standar">Standar</string>
+    <string name="status_member">Member</string>
+    <string name="status_umum">Umum</string>
+
     <!-- Profil & Tentang -->
     <string name="profil">Profil Pengguna</string>
     <string name="logout">Keluar Akun</string>
@@ -125,6 +175,9 @@
     <string name="cd_password_input">Kotak masukan kata sandi</string>
     <string name="cd_nama_input">Kotak masukan nama lengkap Anda</string>
     <string name="cd_alamat_input">Kotak masukan alamat domisili Anda</string>
+    <string name="cd_telepon_input">Kotak masukan nomor telepon Anda</string>
+    <string name="cd_usia_input">Kotak masukan usia Anda dalam tahun</string>
+    <string name="cd_jenis_kelamin_input">Pilihan jenis kelamin</string>
     <string name="cd_tinggi_input">Kotak masukan tinggi badan dalam sentimeter</string>
     <string name="cd_tombol_login">Tombol untuk masuk ke aplikasi</string>
     <string name="cd_tombol_register">Tombol untuk mendaftar akun baru</string>
@@ -138,4 +191,6 @@
     <string name="cd_tombol_tentang">Tombol buka informasi tentang aplikasi</string>
     <string name="cd_tombol_ganti_password">Tombol buka form ganti kata sandi</string>
     <string name="cd_tombol_edit_profil">Tombol buka form edit profil</string>
+    <string name="cd_tombol_analisa">Tombol buat analisa kebugaran baru</string>
+    <string name="cd_tombol_lakukan_analisa">Tombol lakukan analisa kebugaran mandiri</string>
 </resources>
