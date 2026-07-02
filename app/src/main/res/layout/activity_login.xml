@@ -36,10 +36,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/app_name"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins" />
+            android:fontFamily="@font/plus_jakarta_sans" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_email"
@@ -52,7 +52,7 @@
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusBottomEnd="12dp"
-            android:fontFamily="@font/poppins">
+            android:fontFamily="@font/plus_jakarta_sans">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:inputType="textEmailAddress"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/plus_jakarta_sans"
                 android:contentDescription="@string/cd_email_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,7 +76,7 @@
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusBottomEnd="12dp"
-            android:fontFamily="@font/poppins">
+            android:fontFamily="@font/plus_jakarta_sans">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:inputType="textPassword"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/plus_jakarta_sans"
                 android:contentDescription="@string/cd_password_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,8 +96,8 @@
             android:minHeight="48dp"
             android:text="@string/login"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
-            android:backgroundTint="@color/emerald_green"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:backgroundTint="@color/stitch_primary"
             android:contentDescription="@string/cd_tombol_login" />
 
         <ProgressBar
@@ -115,9 +115,9 @@
             android:minHeight="48dp"
             android:gravity="center"
             android:text="@string/belum_punya_akun"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="14sp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:clickable="true"
             android:focusable="true" />
 

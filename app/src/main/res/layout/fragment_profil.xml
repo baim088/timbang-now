@@ -15,10 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/profil"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins" />
+            android:fontFamily="@font/plus_jakarta_sans" />
 
         <!-- Info Card -->
         <com.google.android.material.card.MaterialCardView
@@ -43,7 +43,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <TextView
                     android:id="@+id/tv_profil_email"
@@ -52,7 +52,7 @@
                     android:layout_marginTop="4dp"
                     android:textColor="@color/medium_gray"
                     android:textSize="14sp"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <TextView
                     android:id="@+id/tv_profil_alamat"
@@ -61,7 +61,7 @@
                     android:layout_marginTop="4dp"
                     android:textColor="@color/medium_gray"
                     android:textSize="14sp"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <TextView
                     android:id="@+id/tv_profil_tinggi"
@@ -70,7 +70,7 @@
                     android:layout_marginTop="4dp"
                     android:textColor="@color/medium_gray"
                     android:textSize="14sp"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -83,9 +83,9 @@
             android:minHeight="48dp"
             android:text="@string/edit_profil"
             app:icon="@drawable/ic_person"
-            app:iconTint="@color/emerald_green"
+            app:iconTint="@color/stitch_primary"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:contentDescription="@string/cd_tombol_edit_profil" />
 
         <com.google.android.material.button.MaterialButton
@@ -97,7 +97,7 @@
             android:minHeight="48dp"
             android:text="@string/set_target"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:contentDescription="@string/cd_tombol_set_target" />
 
         <com.google.android.material.button.MaterialButton
@@ -109,9 +109,9 @@
             android:minHeight="48dp"
             android:text="@string/ganti_password"
             app:icon="@drawable/ic_key"
-            app:iconTint="@color/emerald_green"
+            app:iconTint="@color/stitch_primary"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:contentDescription="@string/cd_tombol_ganti_password" />
 
         <com.google.android.material.button.MaterialButton
@@ -123,9 +123,9 @@
             android:minHeight="48dp"
             android:text="@string/tentang_aplikasi"
             app:icon="@drawable/ic_info"
-            app:iconTint="@color/emerald_green"
+            app:iconTint="@color/stitch_primary"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:contentDescription="@string/cd_tombol_tentang" />
 
         <TextView
@@ -137,7 +137,7 @@
             android:textColor="@color/charcoal"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins" />
+            android:fontFamily="@font/plus_jakarta_sans" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_riwayat"
@@ -154,7 +154,7 @@
             android:minHeight="48dp"
             android:text="@string/logout"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:backgroundTint="@color/soft_red"
             android:contentDescription="@string/cd_tombol_logout" />
 

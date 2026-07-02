@@ -18,7 +18,7 @@
             android:textColor="@color/emerald_green"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins" />
+            android:fontFamily="@font/plus_jakarta_sans" />
 
         <!-- SECTION 1: Identitas -->
         <com.google.android.material.card.MaterialCardView
@@ -43,7 +43,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/switch_member"
@@ -53,7 +53,7 @@
                     android:minHeight="48dp"
                     android:text="@string/member_terdaftar"
                     android:textColor="@color/charcoal"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <!-- Member selection dropdown -->
                 <com.google.android.material.textfield.TextInputLayout
@@ -67,7 +67,7 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/plus_jakarta_sans"
                     android:visibility="gone">
 
                     <AutoCompleteTextView
@@ -75,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="none" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,7 +91,7 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_nama"
@@ -99,7 +99,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:inputType="textPersonName"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:contentDescription="@string/cd_nama_input" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +114,7 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_telepon"
@@ -122,7 +122,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:inputType="phone"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:contentDescription="@string/cd_telepon_input" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,7 +137,7 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_alamat"
@@ -145,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
                         android:inputType="textPostalAddress"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:contentDescription="@string/cd_alamat_input" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -168,7 +168,7 @@
                         app:boxCornerRadiusTopEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
                         app:boxCornerRadiusBottomEnd="12dp"
-                        android:fontFamily="@font/poppins">
+                        android:fontFamily="@font/plus_jakarta_sans">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_usia"
@@ -176,7 +176,7 @@
                             android:layout_height="wrap_content"
                             android:minHeight="48dp"
                             android:inputType="number"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/plus_jakarta_sans"
                             android:contentDescription="@string/cd_usia_input" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -191,7 +191,7 @@
                         app:boxCornerRadiusTopEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
                         app:boxCornerRadiusBottomEnd="12dp"
-                        android:fontFamily="@font/poppins">
+                        android:fontFamily="@font/plus_jakarta_sans">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_tinggi"
@@ -199,7 +199,7 @@
                             android:layout_height="wrap_content"
                             android:minHeight="48dp"
                             android:inputType="numberDecimal"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/plus_jakarta_sans"
                             android:contentDescription="@string/cd_tinggi_input" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -213,7 +213,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <RadioGroup
                     android:id="@+id/rg_jenis_kelamin"
@@ -229,7 +229,7 @@
                         android:layout_marginEnd="24dp"
                         android:minHeight="48dp"
                         android:text="Pria"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:checked="true" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -237,7 +237,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:text="Wanita" />
                 </RadioGroup>
 
@@ -267,7 +267,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_berat_badan"
@@ -280,14 +280,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_berat_badan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -302,14 +302,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_body_fat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -324,14 +324,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_kadar_air"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -346,14 +346,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_massa_otot"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -368,14 +368,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_nilai_fisik"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -390,14 +390,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_kalori"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -412,14 +412,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_usia_sel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -434,14 +434,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_massa_tulang"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -456,14 +456,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_lemak_perut"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -478,7 +478,7 @@
             android:minHeight="48dp"
             android:text="@string/simpan_dan_analisa"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:backgroundTint="@color/emerald_green"
             android:contentDescription="@string/cd_tombol_simpan" />
 

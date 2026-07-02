@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Palet Utama (agents.md) -->
-    <color name="emerald_green">#FF1B5E20</color>
+    <!-- Palet Utama (Stitch Design) -->
+    <color name="emerald_green">#FF1B5E20</color> <!-- Stitch primary container / override -->
+    <color name="stitch_primary">#FF00450D</color> <!-- Stitch primary -->
+    <color name="stitch_secondary">#FF006E1C</color> <!-- Stitch secondary -->
+    <color name="stitch_secondary_container">#FF91F78E</color> <!-- Stitch secondary container -->
     <color name="emerald_light">#FF4CAF50</color>
     <color name="emerald_surface">#FFE8F5E9</color>
-    <color name="light_gray">#FFFAFAFA</color>
+    <color name="light_gray">#FFF9F9F9</color> <!-- Stitch background/surface -->
     <color name="charcoal">#FF212121</color>
     <color name="soft_red">#FFD32F2F</color>
 
@@ -15,6 +18,12 @@
     <color name="divider_gray">#FFBDBDBD</color>
     <color name="surface_white">#FFFFFFFF</color>
     <color name="card_background">#FFFFFFFF</color>
+
+    <!-- Stitch Containers -->
+    <color name="success_container">#FFE8F5E9</color>
+    <color name="warning_container">#FFFFF8E1</color>
+    <color name="error_container">#FFFFEBEE</color>
+    <color name="glass_surface">#B3FFFFFF</color>
 
     <!-- Chart -->
     <color name="chart_line">#FF2E7D32</color>

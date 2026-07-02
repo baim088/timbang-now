@@ -15,11 +15,20 @@
             android:id="@+id/tv_home_greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:textColor="@color/medium_gray"
+            android:textSize="14sp"
+            android:fontFamily="@font/plus_jakarta_sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="16dp"
+            android:text="Sudahkah Anda menimbang hari ini?"
             android:textColor="@color/charcoal"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins" />
+            android:fontFamily="@font/plus_jakarta_sans" />
 
         <!-- Info Berat Card -->
         <com.google.android.material.card.MaterialCardView
@@ -42,17 +51,17 @@
                     android:text="@string/berat_terakhir"
                     android:textColor="@color/medium_gray"
                     android:textSize="14sp"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <TextView
                     android:id="@+id/tv_berat_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/belum_ada_data"
-                    android:textColor="@color/emerald_green"
+                    android:textColor="@color/stitch_primary"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -72,7 +81,7 @@
                             android:text="@string/bmi_label"
                             android:textColor="@color/medium_gray"
                             android:textSize="12sp"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
 
                         <TextView
                             android:id="@+id/tv_bmi_value"
@@ -82,7 +91,7 @@
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -97,7 +106,7 @@
                             android:text="@string/target_berat"
                             android:textColor="@color/medium_gray"
                             android:textSize="12sp"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
 
                         <TextView
                             android:id="@+id/tv_target_value"
@@ -107,7 +116,7 @@
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -136,7 +145,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <LinearLayout
                     android:id="@+id/layout_analisa_summary"
@@ -159,15 +168,15 @@
                             android:text="BMI"
                             android:textColor="@color/medium_gray"
                             android:textSize="11sp"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                         <TextView
                             android:id="@+id/tv_analisa_bmi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/emerald_green"
+                            android:textColor="@color/stitch_primary"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -183,7 +192,7 @@
                             android:text="Lemak"
                             android:textColor="@color/medium_gray"
                             android:textSize="11sp"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                         <TextView
                             android:id="@+id/tv_analisa_fat"
                             android:layout_width="wrap_content"
@@ -191,7 +200,7 @@
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -207,7 +216,7 @@
                             android:text="Otot"
                             android:textColor="@color/medium_gray"
                             android:textSize="11sp"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                         <TextView
                             android:id="@+id/tv_analisa_otot"
                             android:layout_width="wrap_content"
@@ -215,7 +224,7 @@
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -231,7 +240,7 @@
                             android:text="V.Fat"
                             android:textColor="@color/medium_gray"
                             android:textSize="11sp"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                         <TextView
                             android:id="@+id/tv_analisa_vfat"
                             android:layout_width="wrap_content"
@@ -239,7 +248,7 @@
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:fontFamily="@font/poppins" />
+                            android:fontFamily="@font/plus_jakarta_sans" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -251,7 +260,7 @@
                     android:text="@string/belum_ada_data"
                     android:textColor="@color/medium_gray"
                     android:textSize="13sp"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_lakukan_analisa"
@@ -262,9 +271,9 @@
                     android:minHeight="48dp"
                     android:text="@string/lakukan_analisa"
                     app:icon="@drawable/ic_assessment"
-                    app:iconTint="@color/emerald_green"
+                    app:iconTint="@color/stitch_primary"
                     app:cornerRadius="12dp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/plus_jakarta_sans"
                     android:contentDescription="@string/cd_tombol_lakukan_analisa" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -292,7 +301,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <TextView
                     android:id="@+id/tv_air_progress"
@@ -302,7 +311,7 @@
                     android:text="0 / 2000 ml"
                     android:textColor="@color/medium_gray"
                     android:textSize="14sp"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <ProgressBar
                     android:id="@+id/progress_air"
@@ -311,7 +320,7 @@
                     android:layout_height="12dp"
                     android:layout_marginTop="8dp"
                     android:max="2000"
-                    android:progressTint="@color/emerald_green" />
+                    android:progressTint="@color/stitch_primary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_tambah_air"
@@ -321,8 +330,8 @@
                     android:minHeight="48dp"
                     android:text="@string/tambah_air"
                     app:cornerRadius="12dp"
-                    android:fontFamily="@font/poppins"
-                    android:backgroundTint="@color/emerald_green"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:backgroundTint="@color/stitch_primary"
                     android:contentDescription="@string/cd_tambah_air" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -350,7 +359,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/line_chart"

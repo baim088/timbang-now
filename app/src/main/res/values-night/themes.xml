@@ -1,12 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.TimbangNow" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/emerald_green</item>
+        <item name="colorPrimary">@color/stitch_primary</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/emerald_surface</item>
-        <item name="colorOnPrimaryContainer">@color/emerald_green</item>
-        <item name="colorSecondary">@color/emerald_light</item>
+        <item name="colorPrimaryContainer">@color/emerald_green</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorSecondary">@color/stitch_secondary</item>
         <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/stitch_secondary_container</item>
         <item name="colorError">@color/soft_red</item>
         <item name="colorOnError">@color/white</item>
         <item name="colorSurface">@color/charcoal</item>
@@ -15,22 +16,22 @@
         <item name="android:statusBarColor">@color/charcoal</item>
         <item name="android:navigationBarColor">@color/charcoal</item>
 
-        <!-- Font Family App-Wide -->
-        <item name="fontFamily">@font/poppins</item>
-        <item name="android:fontFamily">@font/poppins</item>
+        <!-- Font Family App-Wide (Stitch Design) -->
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
 
         <!-- Bottom Navigation Style Overrides -->
         <item name="bottomNavigationStyle">@style/Widget.TimbangNow.BottomNavigationView</item>
     </style>
 
-    <!-- Bottom Navigation Styles for Poppins Font -->
+    <!-- Bottom Navigation Styles for Plus Jakarta Sans Font -->
     <style name="Widget.TimbangNow.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
         <item name="itemTextAppearanceActive">@style/Widget.TimbangNow.BottomNavigationView.Text</item>
         <item name="itemTextAppearanceInactive">@style/Widget.TimbangNow.BottomNavigationView.Text</item>
     </style>
 
     <style name="Widget.TimbangNow.BottomNavigationView.Text" parent="TextAppearance.Material3.LabelMedium">
-        <item name="fontFamily">@font/poppins</item>
-        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
     </style>
 </resources>

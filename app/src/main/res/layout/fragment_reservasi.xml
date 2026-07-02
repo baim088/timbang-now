@@ -18,7 +18,7 @@
             android:textColor="@color/emerald_green"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins" />
+            android:fontFamily="@font/plus_jakarta_sans" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_pilih_tanggal"
@@ -29,7 +29,7 @@
             android:minHeight="48dp"
             android:text="@string/pilih_tanggal"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:contentDescription="@string/cd_pilih_tanggal" />
 
         <TextView
@@ -40,7 +40,7 @@
             android:textColor="@color/charcoal"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins" />
+            android:fontFamily="@font/plus_jakarta_sans" />
 
         <!-- Card Form Reservasi -->
         <com.google.android.material.card.MaterialCardView
@@ -65,7 +65,7 @@
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins" />
+                    android:fontFamily="@font/plus_jakarta_sans" />
 
                 <!-- Dropdown Pilih Sesi -->
                 <com.google.android.material.textfield.TextInputLayout
@@ -79,14 +79,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <AutoCompleteTextView
                         android:id="@+id/act_pilih_sesi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="none" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,14 +102,14 @@
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusBottomEnd="12dp"
-                    android:fontFamily="@font/poppins">
+                    android:fontFamily="@font/plus_jakarta_sans">
 
                     <AutoCompleteTextView
                         android:id="@+id/act_pilih_slot"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="48dp"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:inputType="none" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,7 +124,7 @@
             android:minHeight="48dp"
             android:text="@string/reservasi_btn"
             app:cornerRadius="12dp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:backgroundTint="@color/emerald_green"
             android:contentDescription="@string/cd_tombol_reservasi" />
 
