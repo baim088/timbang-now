@@ -40,8 +40,6 @@ public class AdminDashboardActivity extends AppCompatActivity {
                 selectedFragment = new ReservasiAdminFragment();
             } else if (itemId == R.id.nav_profil_admin) {
                 selectedFragment = new ProfilFragment();
-            } else if (itemId == R.id.nav_tentang_admin) {
-                selectedFragment = new AboutFragment();
             }
 
             if (selectedFragment != null) {

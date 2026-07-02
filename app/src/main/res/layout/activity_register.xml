@@ -37,7 +37,8 @@
             android:text="@string/register"
             android:textColor="@color/emerald_green"
             android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_nama"
@@ -45,7 +46,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="@string/nama">
+            android:hint="@string/nama"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:fontFamily="@font/poppins">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_nama"
@@ -53,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:inputType="textPersonName"
+                android:fontFamily="@font/poppins"
                 android:contentDescription="@string/cd_nama_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,7 +69,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="@string/telepon">
+            android:hint="@string/telepon"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:fontFamily="@font/poppins">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_telepon"
@@ -70,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:inputType="phone"
+                android:fontFamily="@font/poppins"
                 android:contentDescription="@string/cd_telepon_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,7 +92,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="@string/alamat">
+            android:hint="@string/alamat"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:fontFamily="@font/poppins">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_alamat"
@@ -87,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:inputType="textPostalAddress"
+                android:fontFamily="@font/poppins"
                 android:contentDescription="@string/cd_alamat_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,7 +123,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                android:hint="@string/usia">
+                android:hint="@string/usia"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                android:fontFamily="@font/poppins">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_usia"
@@ -112,6 +136,7 @@
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
                     android:inputType="number"
+                    android:fontFamily="@font/poppins"
                     android:contentDescription="@string/cd_usia_input" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -121,7 +146,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
-                android:hint="@string/jenis_kelamin">
+                android:hint="@string/jenis_kelamin"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                android:fontFamily="@font/poppins">
 
                 <AutoCompleteTextView
                     android:id="@+id/act_jenis_kelamin"
@@ -129,6 +159,7 @@
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
                     android:inputType="none"
+                    android:fontFamily="@font/poppins"
                     android:contentDescription="@string/cd_jenis_kelamin_input" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -139,7 +170,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="@string/email">
+            android:hint="@string/email"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:fontFamily="@font/poppins">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
@@ -147,6 +183,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:inputType="textEmailAddress"
+                android:fontFamily="@font/poppins"
                 android:contentDescription="@string/cd_email_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,7 +194,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:hint="@string/password"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:fontFamily="@font/poppins">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"
@@ -165,6 +207,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:inputType="textPassword"
+                android:fontFamily="@font/poppins"
                 android:contentDescription="@string/cd_password_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -175,6 +218,8 @@
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
             android:text="@string/register"
+            app:cornerRadius="12dp"
+            android:fontFamily="@font/poppins"
             android:backgroundTint="@color/emerald_green"
             android:contentDescription="@string/cd_tombol_register" />
 
@@ -196,6 +241,7 @@
             android:text="@string/sudah_punya_akun"
             android:textColor="@color/emerald_green"
             android:textSize="14sp"
+            android:fontFamily="@font/poppins"
             android:clickable="true"
             android:focusable="true" />
 

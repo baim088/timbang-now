@@ -17,7 +17,8 @@
             android:text="@string/tab_nutrisi"
             android:textColor="@color/emerald_green"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins" />
 
         <!-- Date Selector Section -->
         <com.google.android.material.button.MaterialButton
@@ -30,6 +31,8 @@
             android:text="@string/pilih_tanggal"
             app:icon="@drawable/ic_calendar"
             app:iconTint="@color/emerald_green"
+            app:cornerRadius="12dp"
+            android:fontFamily="@font/poppins"
             android:contentDescription="@string/cd_pilih_tanggal" />
 
         <TextView
@@ -39,7 +42,8 @@
             android:layout_marginTop="8dp"
             android:textColor="@color/charcoal"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins" />
 
         <!-- Compact Matrix Table Card -->
         <com.google.android.material.card.MaterialCardView
@@ -48,6 +52,7 @@
             android:layout_marginTop="12dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="2dp"
+            app:strokeWidth="0dp"
             app:cardBackgroundColor="@color/card_background">
 
             <LinearLayout
@@ -62,7 +67,8 @@
                     android:text="Pencatatan Konsumsi Nutrisi"
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins" />
 
                 <!-- Table Header Row -->
                 <LinearLayout
@@ -79,7 +85,8 @@
                         android:text="Produk"
                         android:textColor="@color/medium_gray"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -89,7 +96,8 @@
                         android:text="Pagi"
                         android:textColor="@color/emerald_green"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -99,7 +107,8 @@
                         android:text="Siang"
                         android:textColor="@color/emerald_green"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -109,7 +118,8 @@
                         android:text="Malam"
                         android:textColor="@color/emerald_green"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
 
                 <View
@@ -133,7 +143,8 @@
                         android:text="@string/shake"
                         android:textColor="@color/charcoal"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -192,7 +203,8 @@
                         android:text="@string/teh"
                         android:textColor="@color/charcoal"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -251,7 +263,8 @@
                         android:text="@string/aloe"
                         android:textColor="@color/charcoal"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -303,6 +316,8 @@
                     android:layout_marginTop="16dp"
                     android:minHeight="48dp"
                     android:text="@string/simpan"
+                    app:cornerRadius="12dp"
+                    android:fontFamily="@font/poppins"
                     android:backgroundTint="@color/emerald_green" />
 
             </LinearLayout>
@@ -316,7 +331,8 @@
             android:text="Riwayat Pemenuhan Nutrisi"
             android:textColor="@color/charcoal"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_riwayat_nutrisi"

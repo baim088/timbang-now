@@ -17,7 +17,8 @@
             android:text="@string/hasil_analisa"
             android:textColor="@color/emerald_green"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins" />
 
         <!-- User Information Card -->
         <com.google.android.material.card.MaterialCardView
@@ -41,7 +42,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/charcoal"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins" />
 
                 <TextView
                     android:id="@+id/tv_hasil_tanggal"
@@ -49,7 +51,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:textColor="@color/medium_gray"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins" />
 
                 <View
                     android:layout_width="match_parent"
@@ -63,7 +66,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/charcoal"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -93,14 +97,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_bmi"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_bmi_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -117,7 +123,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -147,14 +154,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/berat_badan"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_berat_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -184,14 +193,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_body_fat"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_body_fat_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -208,7 +219,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -238,14 +250,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_kadar_air"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_kadar_air_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -262,7 +276,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -292,14 +307,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_massa_otot"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_massa_otot_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -316,7 +333,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -346,14 +364,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_nilai_fisik"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_nilai_fisik_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -383,14 +403,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_kalori"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_kalori_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -420,14 +442,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_usia_sel"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_usia_sel_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -444,7 +468,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -474,14 +499,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_massa_tulang"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_massa_tulang_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -498,7 +525,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -528,14 +556,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_lemak_perut"
                         android:textColor="@color/medium_gray"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins" />
                     <TextView
                         android:id="@+id/tv_lemak_perut_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/charcoal"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -552,7 +582,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -565,6 +596,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="16dp"
             android:minHeight="48dp"
+            app:cornerRadius="12dp"
+            android:fontFamily="@font/poppins"
             android:text="@string/kembali" />
 
     </LinearLayout>

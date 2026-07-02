@@ -18,7 +18,8 @@
             android:layout_marginBottom="12dp"
             android:textColor="@color/charcoal"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins" />
 
         <!-- Info Berat Card -->
         <com.google.android.material.card.MaterialCardView
@@ -26,6 +27,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             app:cardElevation="2dp"
+            app:strokeWidth="0dp"
             app:cardBackgroundColor="@color/card_background">
 
             <LinearLayout
@@ -39,7 +41,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/berat_terakhir"
                     android:textColor="@color/medium_gray"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins" />
 
                 <TextView
                     android:id="@+id/tv_berat_value"
@@ -48,7 +51,8 @@
                     android:text="@string/belum_ada_data"
                     android:textColor="@color/emerald_green"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -67,7 +71,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/bmi_label"
                             android:textColor="@color/medium_gray"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins" />
 
                         <TextView
                             android:id="@+id/tv_bmi_value"
@@ -76,7 +81,8 @@
                             android:text="-"
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -90,7 +96,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/target_berat"
                             android:textColor="@color/medium_gray"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins" />
 
                         <TextView
                             android:id="@+id/tv_target_value"
@@ -99,7 +106,8 @@
                             android:text="-"
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -112,6 +120,7 @@
             android:layout_marginTop="12dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="2dp"
+            app:strokeWidth="0dp"
             app:cardBackgroundColor="@color/card_background">
 
             <LinearLayout
@@ -126,7 +135,8 @@
                     android:text="@string/analisa_terakhir"
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins" />
 
                 <LinearLayout
                     android:id="@+id/layout_analisa_summary"
@@ -148,14 +158,16 @@
                             android:layout_height="wrap_content"
                             android:text="BMI"
                             android:textColor="@color/medium_gray"
-                            android:textSize="11sp" />
+                            android:textSize="11sp"
+                            android:fontFamily="@font/poppins" />
                         <TextView
                             android:id="@+id/tv_analisa_bmi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/emerald_green"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -170,14 +182,16 @@
                             android:layout_height="wrap_content"
                             android:text="Lemak"
                             android:textColor="@color/medium_gray"
-                            android:textSize="11sp" />
+                            android:textSize="11sp"
+                            android:fontFamily="@font/poppins" />
                         <TextView
                             android:id="@+id/tv_analisa_fat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -192,14 +206,16 @@
                             android:layout_height="wrap_content"
                             android:text="Otot"
                             android:textColor="@color/medium_gray"
-                            android:textSize="11sp" />
+                            android:textSize="11sp"
+                            android:fontFamily="@font/poppins" />
                         <TextView
                             android:id="@+id/tv_analisa_otot"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -214,14 +230,16 @@
                             android:layout_height="wrap_content"
                             android:text="V.Fat"
                             android:textColor="@color/medium_gray"
-                            android:textSize="11sp" />
+                            android:textSize="11sp"
+                            android:fontFamily="@font/poppins" />
                         <TextView
                             android:id="@+id/tv_analisa_vfat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/charcoal"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -232,7 +250,8 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/belum_ada_data"
                     android:textColor="@color/medium_gray"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_lakukan_analisa"
@@ -244,6 +263,8 @@
                     android:text="@string/lakukan_analisa"
                     app:icon="@drawable/ic_assessment"
                     app:iconTint="@color/emerald_green"
+                    app:cornerRadius="12dp"
+                    android:fontFamily="@font/poppins"
                     android:contentDescription="@string/cd_tombol_lakukan_analisa" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -255,6 +276,7 @@
             android:layout_marginTop="12dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="2dp"
+            app:strokeWidth="0dp"
             app:cardBackgroundColor="@color/card_background">
 
             <LinearLayout
@@ -269,7 +291,8 @@
                     android:text="@string/air_minum_hari_ini"
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins" />
 
                 <TextView
                     android:id="@+id/tv_air_progress"
@@ -278,7 +301,8 @@
                     android:layout_marginTop="4dp"
                     android:text="0 / 2000 ml"
                     android:textColor="@color/medium_gray"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins" />
 
                 <ProgressBar
                     android:id="@+id/progress_air"
@@ -296,6 +320,8 @@
                     android:layout_marginTop="12dp"
                     android:minHeight="48dp"
                     android:text="@string/tambah_air"
+                    app:cornerRadius="12dp"
+                    android:fontFamily="@font/poppins"
                     android:backgroundTint="@color/emerald_green"
                     android:contentDescription="@string/cd_tambah_air" />
             </LinearLayout>
@@ -308,6 +334,7 @@
             android:layout_marginTop="12dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="2dp"
+            app:strokeWidth="0dp"
             app:cardBackgroundColor="@color/card_background">
 
             <LinearLayout
@@ -322,7 +349,8 @@
                     android:text="@string/grafik_progress"
                     android:textColor="@color/charcoal"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins" />
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/line_chart"
