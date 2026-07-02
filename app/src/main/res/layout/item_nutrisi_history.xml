@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pagi"
-                    android:textColor="@color/emerald_green"
+                    android:textColor="@color/stitch_primary"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Siang"
-                    android:textColor="@color/emerald_green"
+                    android:textColor="@color/stitch_primary"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Malam"
-                    android:textColor="@color/emerald_green"
+                    android:textColor="@color/stitch_primary"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 

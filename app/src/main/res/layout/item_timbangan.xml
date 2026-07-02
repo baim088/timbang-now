@@ -47,7 +47,7 @@
                 android:id="@+id/tv_bmi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/emerald_green"
+                android:textColor="@color/stitch_primary"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

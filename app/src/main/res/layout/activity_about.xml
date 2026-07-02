@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/app_name"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="28sp"
             android:textStyle="bold" />
 
@@ -105,7 +105,7 @@
                     app:cardCornerRadius="26dp"
                     app:cardElevation="2dp"
                     app:strokeWidth="1.5dp"
-                    app:strokeColor="@color/emerald_green">
+                    app:strokeColor="@color/stitch_primary">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -149,7 +149,7 @@
             android:layout_marginBottom="24dp"
             android:minHeight="48dp"
             android:text="Kembali"
-            android:backgroundTint="@color/emerald_green" />
+            android:backgroundTint="@color/stitch_primary" />
 
     </LinearLayout>
 </ScrollView>

@@ -16,7 +16,7 @@
             android:id="@+id/tv_member_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -94,7 +94,7 @@
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
             android:text="@string/simpan"
-            android:backgroundTint="@color/emerald_green"
+            android:backgroundTint="@color/stitch_primary"
             android:contentDescription="@string/cd_tombol_simpan" />
 
         <ProgressBar

@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:text="@string/hadir"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tab_nutrisi"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="20sp"
             android:textStyle="bold"
             android:fontFamily="@font/plus_jakarta_sans" />
@@ -30,7 +30,7 @@
             android:minHeight="48dp"
             android:text="@string/pilih_tanggal"
             app:icon="@drawable/ic_calendar"
-            app:iconTint="@color/emerald_green"
+            app:iconTint="@color/stitch_primary"
             app:cornerRadius="12dp"
             android:fontFamily="@font/plus_jakarta_sans"
             android:contentDescription="@string/cd_pilih_tanggal" />
@@ -94,7 +94,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Pagi"
-                        android:textColor="@color/emerald_green"
+                        android:textColor="@color/stitch_primary"
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/plus_jakarta_sans" />
@@ -105,7 +105,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Siang"
-                        android:textColor="@color/emerald_green"
+                        android:textColor="@color/stitch_primary"
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/plus_jakarta_sans" />
@@ -116,7 +116,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Malam"
-                        android:textColor="@color/emerald_green"
+                        android:textColor="@color/stitch_primary"
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/plus_jakarta_sans" />
@@ -318,7 +318,7 @@
                     android:text="@string/simpan"
                     app:cornerRadius="12dp"
                     android:fontFamily="@font/plus_jakarta_sans"
-                    android:backgroundTint="@color/emerald_green" />
+                    android:backgroundTint="@color/stitch_primary" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

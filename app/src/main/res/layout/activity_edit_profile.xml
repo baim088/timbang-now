@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit_profil_title"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -61,7 +61,7 @@
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
             android:text="@string/simpan_perubahan"
-            android:backgroundTint="@color/emerald_green" />
+            android:backgroundTint="@color/stitch_primary" />
 
         <ProgressBar
             android:id="@+id/progress_bar"

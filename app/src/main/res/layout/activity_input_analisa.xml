@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/analisa_kebugaran"
-            android:textColor="@color/emerald_green"
+            android:textColor="@color/stitch_primary"
             android:textSize="24sp"
             android:textStyle="bold"
             android:fontFamily="@font/plus_jakarta_sans" />
@@ -479,7 +479,7 @@
             android:text="@string/simpan_dan_analisa"
             app:cornerRadius="12dp"
             android:fontFamily="@font/plus_jakarta_sans"
-            android:backgroundTint="@color/emerald_green"
+            android:backgroundTint="@color/stitch_primary"
             android:contentDescription="@string/cd_tombol_simpan" />
 
         <ProgressBar
