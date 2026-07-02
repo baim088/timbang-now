@@ -57,6 +57,7 @@ public class ProfilFragment extends Fragment {
         btnEditProfil = view.findViewById(R.id.btn_edit_profil);
         btnSetTarget = view.findViewById(R.id.btn_set_target);
         btnGantiPassword = view.findViewById(R.id.btn_ganti_password);
+        MaterialButton btnTentang = view.findViewById(R.id.btn_tentang);
         btnLogout = view.findViewById(R.id.btn_logout);
         rvRiwayat = view.findViewById(R.id.rv_riwayat);
 
@@ -104,6 +105,7 @@ public class ProfilFragment extends Fragment {
         btnEditProfil.setOnClickListener(v -> startActivity(new Intent(getContext(), EditProfileActivity.class)));
         btnSetTarget.setOnClickListener(v -> showSetTargetDialog());
         btnGantiPassword.setOnClickListener(v -> startActivity(new Intent(getContext(), ChangePasswordActivity.class)));
+        btnTentang.setOnClickListener(v -> startActivity(new Intent(getContext(), com.timbangnow.app.ui.AboutActivity.class)));
         btnLogout.setOnClickListener(v -> showLogoutDialog());
     }
 

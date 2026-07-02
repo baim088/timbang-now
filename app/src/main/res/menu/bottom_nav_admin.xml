@@ -5,6 +5,10 @@
         android:icon="@drawable/ic_group"
         android:title="@string/tab_member" />
     <item
+        android:id="@+id/nav_timbangan"
+        android:icon="@drawable/ic_scale"
+        android:title="@string/tab_timbangan" />
+    <item
         android:id="@+id/nav_analisa"
         android:icon="@drawable/ic_assessment"
         android:title="@string/tab_analisa" />
@@ -16,8 +20,4 @@
         android:id="@+id/nav_profil_admin"
         android:icon="@drawable/ic_person"
         android:title="@string/tab_profil" />
-    <item
-        android:id="@+id/nav_tentang_admin"
-        android:icon="@drawable/ic_info"
-        android:title="@string/tab_tentang" />
 </menu>

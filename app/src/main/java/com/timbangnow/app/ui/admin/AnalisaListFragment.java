@@ -2,9 +2,12 @@ package com.timbangnow.app.ui.admin;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,12 +22,17 @@ import com.timbangnow.app.adapter.AnalisaHistoryAdapter;
 import com.timbangnow.app.model.AnalisaKebugaran;
 import com.timbangnow.app.viewmodel.AnalisaViewModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AnalisaListFragment extends Fragment {
 
     private RecyclerView rvAnalisaList;
     private MaterialButton btnBuatAnalisa;
+    private EditText etSearch;
     private AnalisaHistoryAdapter adapter;
     private AnalisaViewModel viewModel;
+    private List<AnalisaKebugaran> allAnalisa = new ArrayList<>();
 
     @Nullable
     @Override
@@ -38,12 +46,12 @@ public class AnalisaListFragment extends Fragment {
 
         rvAnalisaList = view.findViewById(R.id.rv_analisa_list);
         btnBuatAnalisa = view.findViewById(R.id.btn_buat_analisa);
+        etSearch = view.findViewById(R.id.et_search);
 
         rvAnalisaList.setLayoutManager(new LinearLayoutManager(getContext()));
         
         adapter = new AnalisaHistoryAdapter(null, item -> {
             Intent intent = new Intent(getContext(), HasilAnalisaActivity.class);
-            // Put all fields into Intent extras
             populateIntentWithAnalisaData(intent, item);
             startActivity(intent);
         });
@@ -52,8 +60,20 @@ public class AnalisaListFragment extends Fragment {
         viewModel = new ViewModelProvider(requireActivity()).get(AnalisaViewModel.class);
         viewModel.getAnalisaList().observe(getViewLifecycleOwner(), list -> {
             if (list != null) {
-                adapter.updateList(list);
+                allAnalisa = list;
+                filterAnalisa(etSearch.getText().toString());
             }
+        });
+
+        etSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filterAnalisa(s.toString());
+            }
+            @Override
+            public void afterTextChanged(Editable s) {}
         });
 
         btnBuatAnalisa.setOnClickListener(v -> {
@@ -66,6 +86,21 @@ public class AnalisaListFragment extends Fragment {
     public void onResume() {
         super.onResume();
         viewModel.loadAll();
+    }
+
+    private void filterAnalisa(String query) {
+        if (query.isEmpty()) {
+            adapter.updateList(allAnalisa);
+            return;
+        }
+        List<AnalisaKebugaran> filtered = new ArrayList<>();
+        for (AnalisaKebugaran a : allAnalisa) {
+            if ((a.getNama() != null && a.getNama().toLowerCase().contains(query.toLowerCase())) ||
+                (a.getTelepon() != null && a.getTelepon().toLowerCase().contains(query.toLowerCase()))) {
+                filtered.add(a);
+            }
+        }
+        adapter.updateList(filtered);
     }
 
     private void populateIntentWithAnalisaData(Intent intent, AnalisaKebugaran item) {

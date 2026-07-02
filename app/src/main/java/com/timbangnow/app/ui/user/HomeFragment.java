@@ -17,12 +17,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.timbangnow.app.R;
+import com.timbangnow.app.accessibility.AudioAssistant;
 import com.timbangnow.app.model.Timbangan;
 import com.timbangnow.app.model.User;
 import com.timbangnow.app.ui.admin.InputAnalisaActivity;
@@ -30,12 +32,14 @@ import com.timbangnow.app.viewmodel.AnalisaViewModel;
 import com.timbangnow.app.viewmodel.UserViewModel;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
 public class HomeFragment extends Fragment {
 
+    private TextView tvHomeGreeting;
     private TextView tvBeratValue, tvBmiValue, tvTargetValue, tvAirProgress;
     private ProgressBar progressAir;
     private MaterialButton btnTambahAir;
@@ -49,6 +53,7 @@ public class HomeFragment extends Fragment {
     private UserViewModel userViewModel;
     private AnalisaViewModel analisaViewModel;
     private User currentUserProfile = null;
+    private boolean hasGreeted = false;
 
     @Nullable
     @Override
@@ -60,6 +65,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        tvHomeGreeting = view.findViewById(R.id.tv_home_greeting);
         tvBeratValue = view.findViewById(R.id.tv_berat_value);
         tvBmiValue = view.findViewById(R.id.tv_bmi_value);
         tvTargetValue = view.findViewById(R.id.tv_target_value);
@@ -109,6 +115,12 @@ public class HomeFragment extends Fragment {
         userViewModel.getUserProfile().observe(getViewLifecycleOwner(), user -> {
             if (user != null) {
                 currentUserProfile = user;
+                String greeting = getGreetingTime() + ", " + user.getNama() + "!";
+                tvHomeGreeting.setText(greeting);
+                if (!hasGreeted) {
+                    AudioAssistant.getInstance(getContext()).speak(greeting + " Selamat datang kembali di TimbangNow.");
+                    hasGreeted = true;
+                }
             }
         });
 
@@ -181,15 +193,54 @@ public class HomeFragment extends Fragment {
         }
 
         LineDataSet dataSet = new LineDataSet(entries, "Berat Badan (kg)");
-        dataSet.setColor(Color.parseColor("#1B5E20"));
-        dataSet.setCircleColor(Color.parseColor("#4CAF50"));
-        dataSet.setLineWidth(2f);
-        dataSet.setCircleRadius(4f);
+        
+        // ponytail: beautiful premium curve styling
+        dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+        dataSet.setColor(Color.parseColor("#1B5E20")); // Emerald Green
+        dataSet.setCircleColor(Color.parseColor("#4CAF50")); // Green Point
+        dataSet.setLineWidth(3f);
+        dataSet.setCircleRadius(5f);
+        dataSet.setDrawCircleHole(true);
+        dataSet.setCircleHoleColor(Color.WHITE);
+        dataSet.setCircleHoleRadius(2.5f);
         dataSet.setDrawValues(false);
+        
+        // Draw elegant gradient fill below the curve
+        dataSet.setDrawFilled(true);
+        dataSet.setFillColor(Color.parseColor("#C8E6C9")); // Soft green transparent fill
+        dataSet.setFillAlpha(100);
 
         LineData lineData = new LineData(dataSet);
         lineChart.setData(lineData);
+
+        // Customize Axes for premium clean design
         lineChart.getDescription().setEnabled(false);
+        lineChart.getAxisRight().setEnabled(false); // Hide right axis
+        
+        XAxis xAxis = lineChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setDrawGridLines(false); // Hide X grid lines
+        xAxis.setTextColor(Color.parseColor("#757575"));
+        
+        lineChart.getAxisLeft().setGridColor(Color.parseColor("#E0E0E0"));
+        lineChart.getAxisLeft().setTextColor(Color.parseColor("#757575"));
+        lineChart.getLegend().setTextColor(Color.parseColor("#212121"));
+
+        lineChart.animateY(1200); // Smooth premium load animation
         lineChart.invalidate();
+    }
+
+    private String getGreetingTime() {
+        Calendar c = Calendar.getInstance();
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+        if (timeOfDay >= 0 && timeOfDay < 12) {
+            return "Selamat Pagi";
+        } else if (timeOfDay >= 12 && timeOfDay < 15) {
+            return "Selamat Siang";
+        } else if (timeOfDay >= 15 && timeOfDay < 18) {
+            return "Selamat Sore";
+        } else {
+            return "Selamat Malam";
+        }
     }
 }

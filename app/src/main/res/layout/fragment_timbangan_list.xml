@@ -7,28 +7,12 @@
     android:padding="16dp"
     android:background="@color/light_gray">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="@string/daftar_member"
-            android:textColor="@color/emerald_green"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
     <TextView
-        android:id="@+id/tv_greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textColor="@color/charcoal"
-        android:textSize="14sp"
+        android:text="Pencatatan Timbangan Harian"
+        android:textColor="@color/emerald_green"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -37,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Cari member..."
+        android:hint="Cari member untuk ditimbang..."
         app:startIconDrawable="@android:drawable/ic_menu_search">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -49,7 +33,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_members"
+        android:id="@+id/rv_timbangan_members"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="12dp" />
