@@ -19,42 +19,6 @@
             android:textColor="@color/emerald_green"
             android:textSize="20sp"
             android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/btn_admin_edit_profile"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_person"
-                app:tint="@color/emerald_green"
-                android:contentDescription="@string/cd_tombol_edit_profil" />
-
-            <ImageButton
-                android:id="@+id/btn_admin_key"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="4dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_key"
-                app:tint="@color/emerald_green"
-                android:contentDescription="@string/cd_tombol_ganti_password" />
-
-            <ImageButton
-                android:id="@+id/btn_admin_logout"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="4dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_person"
-                app:tint="@color/soft_red"
-                android:contentDescription="@string/cd_tombol_logout" />
-        </LinearLayout>
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView

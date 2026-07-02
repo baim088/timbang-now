@@ -9,6 +9,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.timbangnow.app.R;
 import com.timbangnow.app.accessibility.AudioAssistant;
 import com.timbangnow.app.ui.AboutFragment;
+import com.timbangnow.app.ui.user.ProfilFragment;
 
 public class AdminDashboardActivity extends AppCompatActivity {
 
@@ -35,6 +36,8 @@ public class AdminDashboardActivity extends AppCompatActivity {
                 selectedFragment = new AnalisaListFragment();
             } else if (itemId == R.id.nav_reservasi_admin) {
                 selectedFragment = new ReservasiAdminFragment();
+            } else if (itemId == R.id.nav_profil_admin) {
+                selectedFragment = new ProfilFragment();
             } else if (itemId == R.id.nav_tentang_admin) {
                 selectedFragment = new AboutFragment();
             }

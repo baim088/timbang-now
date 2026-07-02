@@ -30,7 +30,7 @@ import com.timbangnow.app.viewmodel.UserViewModel;
 
 public class ProfilFragment extends Fragment {
 
-    private TextView tvNama, tvEmail, tvAlamat, tvTinggi;
+    private TextView tvNama, tvEmail, tvAlamat, tvTinggi, tvHeaderRiwayat;
     private MaterialButton btnEditProfil, btnSetTarget, btnGantiPassword, btnLogout;
     private RecyclerView rvRiwayat;
     private TimbanganAdapter adapter;
@@ -53,6 +53,7 @@ public class ProfilFragment extends Fragment {
         tvEmail = view.findViewById(R.id.tv_profil_email);
         tvAlamat = view.findViewById(R.id.tv_profil_alamat);
         tvTinggi = view.findViewById(R.id.tv_profil_tinggi);
+        tvHeaderRiwayat = view.findViewById(R.id.tv_header_riwayat);
         btnEditProfil = view.findViewById(R.id.btn_edit_profil);
         btnSetTarget = view.findViewById(R.id.btn_set_target);
         btnGantiPassword = view.findViewById(R.id.btn_ganti_password);
@@ -71,7 +72,20 @@ public class ProfilFragment extends Fragment {
                 tvNama.setText(user.getNama());
                 tvEmail.setText(user.getEmail());
                 tvAlamat.setText("Alamat: " + (user.getAlamat() != null && !user.getAlamat().isEmpty() ? user.getAlamat() : "Belum diisi"));
-                tvTinggi.setText("Tinggi: " + (user.getTinggiBadan() > 0 ? user.getTinggiBadan() + " cm" : "Belum diisi oleh coach"));
+                
+                if ("admin".equalsIgnoreCase(user.getRole())) {
+                    // ponytail: hide admin weight details and target
+                    tvTinggi.setVisibility(View.GONE);
+                    btnSetTarget.setVisibility(View.GONE);
+                    tvHeaderRiwayat.setVisibility(View.GONE);
+                    rvRiwayat.setVisibility(View.GONE);
+                } else {
+                    tvTinggi.setVisibility(View.VISIBLE);
+                    tvTinggi.setText("Tinggi: " + (user.getTinggiBadan() > 0 ? user.getTinggiBadan() + " cm" : "Belum diisi oleh coach"));
+                    btnSetTarget.setVisibility(View.VISIBLE);
+                    tvHeaderRiwayat.setVisibility(View.VISIBLE);
+                    rvRiwayat.setVisibility(View.VISIBLE);
+                }
             }
         });
 

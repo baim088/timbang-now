@@ -28,7 +28,6 @@ public class MemberListFragment extends Fragment {
     private RecyclerView rvMembers;
     private MemberAdapter adapter;
     private AdminViewModel adminViewModel;
-    private ImageButton btnAdminEditProfile, btnAdminKey, btnAdminLogout;
 
     @Nullable
     @Override
@@ -41,9 +40,6 @@ public class MemberListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         rvMembers = view.findViewById(R.id.rv_members);
-        btnAdminEditProfile = view.findViewById(R.id.btn_admin_edit_profile);
-        btnAdminKey = view.findViewById(R.id.btn_admin_key);
-        btnAdminLogout = view.findViewById(R.id.btn_admin_logout);
 
         rvMembers.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -63,25 +59,6 @@ public class MemberListFragment extends Fragment {
             }
         });
 
-        btnAdminEditProfile.setOnClickListener(v -> startActivity(new Intent(getContext(), EditProfileActivity.class)));
-        btnAdminKey.setOnClickListener(v -> startActivity(new Intent(getContext(), ChangePasswordActivity.class)));
-        btnAdminLogout.setOnClickListener(v -> showLogoutDialog());
-
         adminViewModel.loadAllMembers();
-    }
-
-    private void showLogoutDialog() {
-        new AlertDialog.Builder(requireContext())
-                .setTitle(R.string.logout)
-                .setMessage(R.string.konfirmasi_logout)
-                .setPositiveButton(R.string.ya, (dialog, which) -> {
-                    FirebaseAuth.getInstance().signOut();
-                    Intent intent = new Intent(getActivity(), LoginActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                    if (getActivity() != null) getActivity().finish();
-                })
-                .setNegativeButton(R.string.batal, null)
-                .show();
     }
 }
