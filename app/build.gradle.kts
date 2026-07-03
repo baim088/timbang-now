@@ -40,20 +40,24 @@ base {
     archivesName.set("TimbangNow")
 }
 
-tasks.register<Copy>("renameDebugApk") {
-    dependsOn("assembleDebug")
-    from(layout.buildDirectory.dir("outputs/apk/debug"))
-    include("TimbangNow-debug.apk")
-    into(layout.buildDirectory.dir("outputs/final-apk"))
-    rename { "TimbangNow.apk" }
-}
-
-tasks.register<Copy>("renameReleaseApk") {
-    dependsOn("assembleRelease")
-    from(layout.buildDirectory.dir("outputs/apk/release"))
-    include("TimbangNow-release.apk")
-    into(layout.buildDirectory.dir("outputs/final-apk"))
-    rename { "TimbangNow.apk" }
+// ponytail: hook doLast pada assembleDebug/Release untuk salin APK jadi TimbangNow.apk
+afterEvaluate {
+    tasks.named("assembleDebug") {
+        doLast {
+            val dir = layout.buildDirectory.dir("outputs/apk/debug").get().asFile
+            val src = File(dir, "TimbangNow-debug.apk")
+            val dst = File(dir, "TimbangNow.apk")
+            if (src.exists()) src.copyTo(dst, overwrite = true)
+        }
+    }
+    tasks.named("assembleRelease") {
+        doLast {
+            val dir = layout.buildDirectory.dir("outputs/apk/release").get().asFile
+            val src = File(dir, "TimbangNow-release.apk")
+            val dst = File(dir, "TimbangNow.apk")
+            if (src.exists()) src.copyTo(dst, overwrite = true)
+        }
+    }
 }
 
 dependencies {
