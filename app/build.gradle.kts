@@ -36,6 +36,26 @@ android {
     }
 }
 
+base {
+    archivesName.set("TimbangNow")
+}
+
+tasks.register<Copy>("renameDebugApk") {
+    dependsOn("assembleDebug")
+    from(layout.buildDirectory.dir("outputs/apk/debug"))
+    include("TimbangNow-debug.apk")
+    into(layout.buildDirectory.dir("outputs/final-apk"))
+    rename { "TimbangNow.apk" }
+}
+
+tasks.register<Copy>("renameReleaseApk") {
+    dependsOn("assembleRelease")
+    from(layout.buildDirectory.dir("outputs/apk/release"))
+    include("TimbangNow-release.apk")
+    into(layout.buildDirectory.dir("outputs/final-apk"))
+    rename { "TimbangNow.apk" }
+}
+
 dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
